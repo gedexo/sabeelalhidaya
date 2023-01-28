@@ -1,0 +1,35 @@
+{% load static %}
+<div
+class="col-lg-3 widget-area sidebar-left ttm-col-bgcolor-yes ttm-bg ttm-left-span ttm-bgcolor-grey">
+<div class="ttm-col-wrapper-bg-layer ttm-bg-layer"></div>
+<aside class="widget widget-nav-menu">
+    <ul class="widget-menu">
+        <li class="{% if is_ac_service %}active {% endif %}"><a href="{% url 'web:ac_service' %}"> A/C SERVICES & REPAIRS </a></li>
+        <li class="{% if is_electrical_service %}active {% endif %}"><a href="{% url 'web:electrical_service' %}"> ELECTRICALS</a></li>
+        <li class="{% if is_plumbing_service %}active {% endif %}"><a href="{% url 'web:plumbing_service' %}"> PLUMBING </a></li>
+        <li class="{% if is_tiling_service %}active {% endif %}"><a href="{% url 'web:tiling_service' %}"> TILING </a></li>
+        <li class="{% if is_painting_service %}active {% endif %}"><a href="{% url 'web:painting_service' %}"> PAINTING
+            </a></li>
+        <li class="{% if is_carpentry_service %}active {% endif %}"><a href="{% url 'web:carpentry_service' %}"> CARPENTRY </a></li>
+        <li class="{% if is_masonry_service %}active {% endif %}"><a href="{% url 'web:masonry_service' %}"> MASONRY </a></li>
+        <li class="{% if is_wallpaper_fixing %}active {% endif %}" ><a href="{% url 'web:wallpaper_fixing' %}"> WALLPAPER FIXING </a></li>
+        <li class="{% if is_general_maintanance %}active {% endif %}"><a href="{% url 'web:general_maintanance' %}"> GENERAL MAINTENANCE </a></li>
+        <li class="{% if is_building_cleaning_service %}active {% endif %}"><a href="{% url 'web:building_cleaning_service' %}"> BUILDING CLEANING </a></li>
+    </ul>
+</aside>
+{% comment %}
+<aside class="widget contact-widget">
+    <h3 class="widget-title">Get in touch</h3>
+    <ul class="contact-widget-wrapper">
+        <li><i class="fa fa-map-marker"></i>1212 Paint Valley Road East Rutherford, New York
+            06192, USA</li>
+        <li><i class="fa fa-envelope-o"></i><a href="mailto:info@example.com"
+                target="_blank">info@example.com</a></li>
+        <li><i class="fa fa-phone"></i>(+01) 123 456 7890</li>
+        <li><i class="ti ti-alarm-clock"></i>Mon - Sat 8.00 - 18.00. Sunday CLOSED</li>
+    </ul>
+</aside>
+{% endcomment%}
+
+
+</div>

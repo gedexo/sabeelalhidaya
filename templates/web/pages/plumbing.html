@@ -1,0 +1,96 @@
+{% extends 'web/base-two.html' %}
+{% load static %}
+{% block content %}
+
+<!--page start-->
+<div class="page sidebar-true">
+
+    <!-- page-title -->
+    <div class="ttm-page-title-row">
+        <div class="ttm-page-title-row-bg-layer ttm-bg-layer"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="title-box ttm-textcolor-white">
+                        <div class="page-title-heading">
+                            <h1 class="title">PLUMBING</h1>
+                        </div>
+                        <div class="breadcrumb-wrapper">
+                            <span>
+                                <a title="Homepage" href="/"><i class="ti ti-home"></i></a>
+                            </span>
+                            <!-- <span class="ttm-bread-sep">&nbsp; / &nbsp;</span>
+                                <span><span>PLUMBING</span></span> -->
+                        </div>
+                    </div>
+                </div><!-- /.col-md-12 -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </div><!-- page-title end-->
+
+    <!--site-main start-->
+    <div class="site-main">
+
+        <!-- sidebar -->
+        <div class="sidebar ttm-sidebar-left ttm-bgcolor-white break-991-colum clearfix">
+            <div class="container">
+                <!-- row -->
+                <div class="row">
+                    {% include 'web/partials/sidenavbar.html' %}
+                    <div class="col-lg-9 content-area">
+
+                        <div class="ttm-service-single-content-area">
+                            <h3>PLUMBING</h3>
+                            <div class="ttm_single_image-wrapper mb-35">
+                                <img class="img-fluid" src="{% static 'web/images/service-single/plumbing.jpg' %}"
+                                    alt="">
+                            </div>
+                            <div class="ttm-service-description">
+                                <div class="mb-35">
+                                    <p class="text-justify">Water is the most important factor for every human being.
+                                        Proper distribution and
+                                        management of both drinking water and sewage water are necessary for every
+                                        residential and commercial sector. The professional staff of SHTS are dedicated
+                                        to carrying out with professional assistance for your best plumbing services.
+                                    </p>
+
+                                    <p>
+                                        A sanitary drainage system, an irrigation system, and a potable water system are
+                                        three types of plumbing systems. Each of these systems has its own unique roles
+                                        and objectives. Several diverse systems make up a house's plumbing. Freshwater
+                                        is delivered to a home through water supply pipes from the utility or a well and
+                                        is then. These components are found in sinks, toilets, washers, bathtubs, and related fixtures. Water and waste are carried through the drain-waste-vent system to sewers or septic tanks.
+                                        
+
+                                        <ul>
+                                            <li>Maintain enough water pressure.</li>
+                                            <li>Maintain safety.</li>
+                                            <li>Increase the value of your property.</li>
+                                            <li>Save money on your future repair costs.</li>
+                                            <li>Less wastage of water.</li>
+                                            <li>Saves water bill.</li>
+                                        </ul>
+                                    </p>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+
+
+</div>
+
+
+{% endblock %}

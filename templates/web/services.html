@@ -1,0 +1,267 @@
+{% extends 'web/base-two.html' %}
+{% load static %}
+{% block content %}
+
+
+        <!-- page-title -->
+        <div class="ttm-page-title-row">
+            <div class="ttm-page-title-row-bg-layer ttm-bg-layer"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="title-box ttm-textcolor-white">
+                            <div class="page-title-heading">
+                                <h1 class="title">Services</h1>
+                            </div><!-- /.page-title-captions -->
+                            <div class="breadcrumb-wrapper">
+                                <span>
+                                    <a title="Homepage" href="index.html"><i class="ti ti-home"></i></a>
+                                </span>
+                                <span class="ttm-bread-sep">&nbsp; / &nbsp;</span>
+                                <span><span>Services 2</span></span>
+                            </div>
+                        </div>
+                    </div><!-- /.col-md-12 -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </div><!-- page-title end-->
+
+        <!--site-main start-->
+        <div class="site-main">
+
+            <!-- service-section -->
+            <section class="ttm-row services2-section pb-110 clearfix">
+                <div class="container">
+                    <!-- row -->
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <!-- section title -->
+                            <div class="section-title with-desc title-style-center_text clearfix">
+                                <div class="title-header">
+                                    <h5>OUR SERVICES</h5>
+                                    <h2 class="title">GET YOUR FINEST <br>SERVICES FROM SHTS</h2>
+                                </div>
+                                <div class="title-desc">Sabeel Al Hidaya Technical Services offers the following awesome services at the best grade.</div>
+                            </div><!-- section title end -->
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+                    <div class="row mt-10">
+
+                        <div class="col-md-4">
+                            <!-- featured-imagebox -->
+                            <div class="featured-imagebox box-shadow2 mb-30">
+                                <div class="featured-thumbnail">
+                                    <img class="img-fluid" src="{% static 'web/images/sats/air.jpg' %}" alt="">
+                                </div>
+                                <div class="ttm-box-bottom-content">
+                                    <div class="featured-title featured-title">
+                                        <h5><a href="{% url 'web:ac_service' %}">A/C SERVICES & REPAIRS
+                                            </a></h5>
+                                    </div>
+                                    <div class="featured-desc">
+                                        <p>The climate is too hot and is expecting more in the coming days, get your A/C ready with the finest A/C services and repairs from SHTS.</p>
+                                        <!-- <a class="ttm-btn ttm-btn-size-md ttm-btn-shape-square ttm-icon-btn-right ttm-btn-style-border ttm-btn-color-black mt-10"
+                                            href="#">MORE DETAILS<i
+                                                class="ti ti-angle-double-right"></i></a> -->
+                                    </div>
+                                </div>
+                            </div><!-- featured-imagebox end-->
+                        </div>
+
+                        <div class="col-md-4">
+                            <!-- featured-imagebox -->
+                            <div class="featured-imagebox box-shadow2 mb-30">
+                                <div class="featured-thumbnail">
+                                    <img class="img-fluid" src="{% static 'web/images/sats/electro.jpg' %}" alt="">
+                                </div>
+                                <div class="ttm-box-bottom-content">
+                                    <div class="featured-title featured-title">
+                                        <h5><a href="{% url 'web:electrical_service' %}">ELECTRICALS
+                                            </a></h5>
+                                    </div>
+                                    <div class="featured-desc">
+                                        <p>Every construction requires electricity for one or another purpose, with the finest electrical services more benefits can be added to your projects.</p>
+                                        <!-- <a class="ttm-btn ttm-btn-size-md ttm-btn-shape-square ttm-icon-btn-right ttm-btn-style-border ttm-btn-color-black mt-10"
+                                            href="#">MORE DETAILS<i
+                                                class="ti ti-angle-double-right"></i></a> -->
+                                    </div>
+                                </div>
+                            </div><!-- featured-imagebox end-->
+                        </div>
+
+                        <div class="col-md-4">
+                            <!-- featured-imagebox -->
+                            <div class="featured-imagebox box-shadow2 mb-30">
+                                <div class="featured-thumbnail">
+                                    <img class="img-fluid" src="{% static 'web/images/sats/plumbing.jpg' %}" alt="">
+                                </div>
+                                <div class="ttm-box-bottom-content">
+                                    <div class="featured-title featured-title">
+                                        <h5><a href="{% url 'web:plumbing_service' %}">PLUMBING
+                                            </a></h5>
+                                    </div>
+                                    <div class="featured-desc">
+                                        <p>Distribution and management of both drinking water and sewage water are carried out with professional assistance for your best plumbing services.</p>
+                                        <!-- <a class="ttm-btn ttm-btn-size-md ttm-btn-shape-square ttm-icon-btn-right ttm-btn-style-border ttm-btn-color-black mt-10"
+                                            href="#">MORE DETAILS<i
+                                                class="ti ti-angle-double-right"></i></a> -->
+                                    </div>
+                                </div>
+                            </div><!-- featured-imagebox end-->
+                        </div>
+
+                        <div class="col-md-4">
+                            <!-- featured-imagebox -->
+                            <div class="featured-imagebox box-shadow2 mb-30">
+                                <div class="featured-thumbnail">
+                                    <img class="img-fluid" src="{% static 'web/images/sats/tiling.jpg' %}" alt="">
+                                </div>
+                                <div class="ttm-box-bottom-content">
+                                    <div class="featured-title featured-title">
+                                        <h5><a href="{% url 'web:tiling_service' %}"> TILING</a></h5>
+                                    </div>
+                                    <div class="featured-desc">
+                                        <p>Giving the most adequate to your construction will enhance the total appearance and it also helps in simplifying the cleaning processes.</p>
+                                        <!-- <a class="ttm-btn ttm-btn-size-md ttm-btn-shape-square ttm-icon-btn-right ttm-btn-style-border ttm-btn-color-black mt-10"
+                                            href="#">MORE DETAILS<i
+                                                class="ti ti-angle-double-right"></i></a> -->
+                                    </div>
+                                </div>
+                            </div><!-- featured-imagebox end-->
+                        </div>
+
+                        <div class="col-md-4">
+                            <!-- featured-imagebox -->
+                            <div class="featured-imagebox box-shadow2 mb-30">
+                                <div class="featured-thumbnail">
+                                    <img class="img-fluid" src="{% static 'web/images/sats/painting.jpg' %}" alt="">
+                                </div>
+                                <div class="ttm-box-bottom-content">
+                                    <div class="featured-title featured-title">
+                                        <h5><a href="{% url 'web:painting_service' %}">PAINTING
+                                            </a></h5>
+                                    </div>
+                                    <div class="featured-desc">
+                                        <p>The total appearance of a building, both internal and external can be modified by applying suitable paints on the walls and furnishers.</p>
+                                        <!-- <a class="ttm-btn ttm-btn-size-md ttm-btn-shape-square ttm-icon-btn-right ttm-btn-style-border ttm-btn-color-black mt-10"
+                                            href="#">MORE DETAILS<i
+                                                class="ti ti-angle-double-right"></i></a> -->
+                                    </div>
+                                </div>
+                            </div><!-- featured-imagebox end-->
+                        </div>
+
+                        <div class="col-md-4">
+                            <!-- featured-imagebox -->
+                            <div class="featured-imagebox box-shadow2 mb-30">
+                                <div class="featured-thumbnail">
+                                    <img class="img-fluid" src="{% static 'web/images/sats/carpentary.jpg' %}" alt="">
+                                </div>
+                                <div class="ttm-box-bottom-content">
+                                    <div class="featured-title featured-title">
+                                        <h5><a href="{% url 'web:carpentry_service' %}">CARPENTRY
+                                            </a></h5>
+                                    </div>
+                                    <div class="featured-desc">
+                                        <p>Crafting skills in the woods to furnish innovative and favourable furniture for your necessities at the best affordable service rates.</p>
+                                        <!-- <a class="ttm-btn ttm-btn-size-md ttm-btn-shape-square ttm-icon-btn-right ttm-btn-style-border ttm-btn-color-black mt-10"
+                                            href="#">MORE DETAILS<i
+                                                class="ti ti-angle-double-right"></i></a> -->
+                                    </div>
+                                </div>
+                            </div><!-- featured-imagebox end-->
+                        </div>
+
+
+
+                        <div class="col-md-4">
+                            <!-- featured-imagebox -->
+                            <div class="featured-imagebox box-shadow2 mb-30">
+                                <div class="featured-thumbnail">
+                                    <img class="img-fluid" src="{% static 'web/images/sats/Insulation Contracting.jpg' %}" alt="">
+                                </div>
+                                <div class="ttm-box-bottom-content">
+                                    <div class="featured-title featured-title">
+                                        <h5><a href="{% url 'web:masonry_service' %}">MASONRY </a></h5>
+                                    </div>
+                                    <div class="featured-desc">
+                                        <p>SHTS undertakes the art and craftwork of construction and fabricating in stone, clay, brick, or concrete block that brings a strong base and partition to your buildings.</p>
+                                        <!-- <a class="ttm-btn ttm-btn-size-md ttm-btn-shape-square ttm-icon-btn-right ttm-btn-style-border ttm-btn-color-black mt-10"
+                                            href="#">MORE DETAILS<i
+                                                class="ti ti-angle-double-right"></i></a> -->
+                                    </div>
+                                </div>
+                            </div><!-- featured-imagebox end-->
+                        </div>
+
+                        <div class="col-md-4">
+                            <!-- featured-imagebox -->
+                            <div class="featured-imagebox box-shadow2 mb-30">
+                                <div class="featured-thumbnail">
+                                    <img class="img-fluid" src="{% static 'web/images/sats/wall paper-fixing.jpg' %}" alt="">
+                                </div>
+                                <div class="ttm-box-bottom-content">
+                                    <div class="featured-title featured-title">
+                                        <h5><a href="{% url 'web:wallpaper_fixing' %}">WALLPAPER FIXING </a></h5>
+                                    </div>
+                                    <div class="featured-desc">
+                                        <p>Wallpapers are the new alternative to wall paintings that have been widely used nowadays as varieties of patterns and designs are available with them.</p>
+                                        <!-- <a class="ttm-btn ttm-btn-size-md ttm-btn-shape-square ttm-icon-btn-right ttm-btn-style-border ttm-btn-color-black mt-10"
+                                            href="#">MORE DETAILS<i
+                                                class="ti ti-angle-double-right"></i></a> -->
+                                    </div>
+                                </div>
+                            </div><!-- featured-imagebox end-->
+                        </div>
+
+                        <div class="col-md-4">
+                            <!-- featured-imagebox -->
+                            <div class="featured-imagebox box-shadow2 mb-30">
+                                <div class="featured-thumbnail">
+                                    <img class="img-fluid" src="{% static 'web/images/sats/Partitions & False Ceilings.jpg' %}" alt="">
+                                </div>
+                                <div class="ttm-box-bottom-content">
+                                    <div class="featured-title featured-title">
+                                        <h5><a href="{% url 'web:general_maintanance' %}">GENERAL MAINTENANCE</a></h5>
+                                    </div>
+                                    <div class="featured-desc">
+                                        <p>Maintenance is no more a headache for you, we take care of all of your general maintenance needs with superior quality and customer relationship.</p>
+                                        <!-- <a class="ttm-btn ttm-btn-size-md ttm-btn-shape-square ttm-icon-btn-right ttm-btn-style-border ttm-btn-color-black mt-10"
+                                            href="#">MORE DETAILS<i
+                                                class="ti ti-angle-double-right"></i></a> -->
+                                    </div>
+                                </div>
+                            </div><!-- featured-imagebox end-->
+                        </div>
+
+                        <div class="col-md-4">
+                            <!-- featured-imagebox -->
+                            <div class="featured-imagebox box-shadow2 mb-30">
+                                <div class="featured-thumbnail">
+                                    <img class="img-fluid" src="{% static 'web/images/sats/Building Cleaning Services.jpg' %}" alt="">
+                                </div>
+                                <div class="ttm-box-bottom-content">
+                                    <div class="featured-title featured-title">
+                                        <h5><a href="{% url 'web:building_cleaning_service' %}">BUILDING CLEANING  </a></h5>
+                                    </div>
+                                    <div class="featured-desc">
+                                        <p>We deliver the complete solution for building cleaning services at the best quality with the assistance of skilled labourers of SHTS.</p>
+                                        <!-- <a class="ttm-btn ttm-btn-size-md ttm-btn-shape-square ttm-icon-btn-right ttm-btn-style-border ttm-btn-color-black mt-10"
+                                            href="#">MORE DETAILS<i
+                                                class="ti ti-angle-double-right"></i></a> -->
+                                    </div>
+                                </div>
+                            </div><!-- featured-imagebox end-->
+                        </div>
+
+                    </div><!-- row end -->
+                </div>
+            </section>
+            <!-- service-section end -->
+
+        </div>
+        <!--site-main end-->
+
+{% endblock %}

@@ -1,0 +1,98 @@
+{% extends 'web/base-two.html' %}
+{% load static %}
+{% block content %}
+
+<!--page start-->
+<div class="page sidebar-true">
+
+
+
+
+    <!-- page-title -->
+    <div class="ttm-page-title-row">
+        <div class="ttm-page-title-row-bg-layer ttm-bg-layer"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="title-box ttm-textcolor-white">
+                        <div class="page-title-heading">
+                            <h1 class="title">PAINTING</h1>
+                        </div><!-- /.page-title-captions -->
+                        <div class="breadcrumb-wrapper">
+                            <span>
+                                <a title="Homepage" href="/"><i class="ti ti-home"></i></a>
+                            </span>
+                            <!-- <span class="ttm-bread-sep">&nbsp; / &nbsp;</span>
+                                <span><span>PAINTING</span></span> -->
+                        </div>
+                    </div>
+                </div><!-- /.col-md-12 -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </div><!-- page-title end-->
+
+    <!--site-main start-->
+    <div class="site-main">
+
+        <!-- sidebar -->
+        <div class="sidebar ttm-sidebar-left ttm-bgcolor-white break-991-colum clearfix">
+            <div class="container">
+                <!-- row -->
+                <div class="row">
+                    {% include 'web/partials/sidenavbar.html' %}
+                    <div class="col-lg-9 content-area">
+                        <!-- ttm-service-single-content-are -->
+                        <div class="ttm-service-single-content-area">
+                            <h3>PAINTING</h3>
+                            <div class="ttm_single_image-wrapper mb-35">
+                                <img class="img-fluid" src="{% static 'web/images/service-single/painting.jpg' %}"
+                                    alt="">
+                            </div>
+                            <div class="ttm-service-description">
+                                <div class="mb-35">
+                                    <p class="text-justify">The total appearance of a building, both internal and external can be modified by
+                                        applying suitable paints on the walls and furnishers. SHTS care for the look and
+                                        glamour of your construction. Our dedicated team strives to add beauty to your
+                                        walls by maintaining superior quality in product and profession.</p>
+
+                                    <p class="text-justify">
+                                        Being one of the leading service providers in UAE, we deliver unique services on
+                                        Interior, exterior painting and decorative painting. A great paint job can
+                                        transform the look and feel of your home. Using high-quality paints and skilled
+                                        personnel for exterior wall painting in Dubai is essential to protect the
+                                        outside of your home from the harsh sun and dry weather conditions. Meanwhile,
+                                        inside your villa or apartment, painting with the right colours can keep your
+                                        space looking fresh and spacious.
+
+                                        <ul>
+                                            <li>Enhance the value of your home.</li>
+                                            <li>Elevate your mood at home.</li>
+                                            <li>Shield and prevent damage to your home.</li>
+                                            <li>Enhance the air quality in and around your home.</li>
+                                            <li>Beautify your interior.</li>
+                                            
+                                        </ul>
+                                    </p>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <!-- ttm-service-single-content-are end -->
+                    </div>
+
+                </div><!-- row end -->
+            </div>
+        </div>
+        <!-- sidebar end -->
+
+
+    </div>
+    <!--site-main end-->
+
+
+
+</div><!-- page end -->
+
+
+{% endblock %}

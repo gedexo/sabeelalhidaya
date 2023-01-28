@@ -1,0 +1,107 @@
+{% extends 'web/base-two.html' %}
+{% load static %}
+{% block content %}
+
+<!--page start-->
+<div class="page sidebar-true">
+
+
+
+
+    <!-- page-title -->
+    <div class="ttm-page-title-row">
+        <div class="ttm-page-title-row-bg-layer ttm-bg-layer"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="title-box ttm-textcolor-white">
+                        <div class="page-title-heading">
+                            <h1 class="title">A/C SERVICES & REPAIRS</h1>
+                        </div><!-- /.page-title-captions -->
+                        <div class="breadcrumb-wrapper">
+                            <span>
+                                <a title="Homepage" href="/"><i class="ti ti-home"></i></a>
+                            </span>
+                            <!-- <span class="ttm-bread-sep">&nbsp; / &nbsp;</span>
+                            <span><span>Wiring And Installation</span></span> -->
+                        </div>
+                    </div>
+                </div><!-- /.col-md-12 -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </div><!-- page-title end-->
+
+    <!--site-main start-->
+    <div class="site-main">
+
+        <!-- sidebar -->
+        <div class="sidebar ttm-sidebar-left ttm-bgcolor-white break-991-colum clearfix">
+            <div class="container">
+                <!-- row -->
+                <div class="row">
+                    {% include 'web/partials/sidenavbar.html' %}
+                    <div class="col-lg-9 content-area">
+                        <!-- ttm-service-single-content-are -->
+                        <div class="ttm-service-single-content-area">
+                            <h3>A/C SERVICES & REPAIRS</h3>
+                            <div class="ttm_single_image-wrapper mb-35">
+                                <img class="img-fluid" src="{% static 'web/images/service-single/ac service.jpg' %}"
+                                    alt="">
+                            </div>
+                            <div class="ttm-service-description">
+                                <div class="mb-35">
+                                    <p class="text-justify">The climate is too hot and is expecting more in the coming days, get your A/C
+                                        ready with the finest A/C services and repairs from SHTS. We undertake services
+                                        and repairs of air conditioners of various brands with professional assistance
+                                        to ensure the quality of the service delivered. Repair and service of AC are
+                                        crucial in UAE as a malfunction in the middle of a hot summer can produce
+                                        unbearable hot. Regular service and maintenance of AC is a must to keep your
+                                        resident cool and fresh.</p>
+
+                                    <p class="text-justify">
+                                        Regular AC servicing maintains the effectiveness of your AC, ensuring all
+                                        mechanical components are working optimally whilst also getting rid of dust and
+                                        germs. Regularly serviced AC units are more reliable and keep your air cool and
+                                        safe. Regular AC services enable us to spot any potential problems early before
+                                        they can negatively impact the safe and effective running of your unit. Everyone
+                                        wants and deserves an odour-free home. Air fresheners mask bad smells, but duct
+                                        cleaning can deal with the source of the issue, enabling you and your family to
+                                        enjoy your home without the fear of unpleasant aromas.
+                                    </p>
+                                    <p class="text-justify">
+                                        Sabeel Al Hidaya Technical Services consist of professional individuals who
+                                        comprehend the significance and challenges of AC services in the UAE. We look
+                                        forward to keeping your residential cool and fresh throughout.
+                                        <ul>
+                                            <li>Boost performance of AC.</li>
+                                            <li>Reducing electrical bill.</li>
+                                            <li>Improve the life period.</li>
+                                            <li>Sustain the proper working of AC.</li>
+                                            <li>Efficient cooling system.</li>
+                                            <li>Maintain good quality of air.</li>
+                                            <li>Fresh and cool indoors.</li>
+                                        </ul>
+                                    </p>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <!-- ttm-service-single-content-are end -->
+                    </div>
+
+                </div><!-- row end -->
+            </div>
+        </div>
+        <!-- sidebar end -->
+
+
+    </div>
+    <!--site-main end-->
+
+
+
+</div><!-- page end -->
+
+
+{% endblock %}

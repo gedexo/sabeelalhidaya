@@ -1,0 +1,89 @@
+{% extends 'web/base-two.html' %}
+{% load static %}
+{% block content %}
+
+<!--page start-->
+<div class="page sidebar-true">
+
+
+
+
+    <!-- page-title -->
+    <div class="ttm-page-title-row">
+        <div class="ttm-page-title-row-bg-layer ttm-bg-layer"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="title-box ttm-textcolor-white">
+                        <div class="page-title-heading">
+                            <h1 class="title">GENERAL MAINTENANCE</h1>
+                        </div><!-- /.page-title-captions -->
+                        <div class="breadcrumb-wrapper">
+                            <span>
+                                <a title="Homepage" href="/"><i class="ti ti-home"></i></a>
+                            </span>
+                            <!-- <span class="ttm-bread-sep">&nbsp; / &nbsp;</span>
+                                <span><span>GENERAL MAINTENANCE</span></span> -->
+                        </div>
+                    </div>
+                </div><!-- /.col-md-12 -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </div><!-- page-title end-->
+
+    <!--site-main start-->
+    <div class="site-main">
+
+        <!-- sidebar -->
+        <div class="sidebar ttm-sidebar-left ttm-bgcolor-white break-991-colum clearfix">
+            <div class="container">
+                <!-- row -->
+                <div class="row">
+                    {% include 'web/partials/sidenavbar.html' %}
+                    <div class="col-lg-9 content-area">
+                        <!-- ttm-service-single-content-are -->
+                        <div class="ttm-service-single-content-area">
+                            <h3>GENERAL MAINTENANCE</h3>
+                            <div class="ttm_single_image-wrapper mb-35">
+                                <img class="img-fluid" src="{% static 'web/images/service-single/maintenance.jpg' %}"
+                                    alt="">
+                            </div>
+                            <div class="ttm-service-description">
+                                <div class="mb-35">
+                                    <p>Maintenance is no more a headache for you, we take care of all of your general
+                                        maintenance needs with superior quality and customer relationship. SHTS is one
+                                        of the leading service providers in UAE and we look forward to delivering
+                                        exceptional services for everyone at premium quality and range.</p>
+
+                                    <p>
+                                        Maintenance work includes fixing and maintaining mechanical equipment,
+                                        buildings, and machines. The work performed by this company includes plumbing,
+                                        painting, floor repair and maintenance, electrical repairs, and heating and air
+                                        conditioning system maintenance. Buildings, machines, and mechanical equipment
+                                        are maintained by general maintenance and repair workers. Work includes
+                                        painting, repairing floors, and maintaining plumbing, electrical,
+                                        air-conditioning, and heating systems.
+
+                                        <ul>
+                                            <li>Keeps your holdings safe and secure.</li>
+                                            <li>Clean and secure surroundings.</li>
+                                            <li>Prevent serious damages.</li>
+                                            <li>Reduce expenses.</li>
+                                            <li>Recede the risk of accidents. </li>
+                                            <li>Elicit breakdowns.</li>
+                                            <li>Improve efficiency.</li>
+                                            <li>Enhance working conditions.</li>
+                                        </ul>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

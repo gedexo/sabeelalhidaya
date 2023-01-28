@@ -1,0 +1,97 @@
+{% extends 'web/base-two.html' %}
+{% load static %}
+{% block content %}
+
+<!--page start-->
+<div class="page sidebar-true">
+
+
+
+
+    <!-- page-title -->
+    <div class="ttm-page-title-row">
+        <div class="ttm-page-title-row-bg-layer ttm-bg-layer"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="title-box ttm-textcolor-white">
+                        <div class="page-title-heading">
+                            <h1 class="title">TILING</h1>
+                        </div><!-- /.page-title-captions -->
+                        <div class="breadcrumb-wrapper">
+                            <span>
+                                <a title="Homepage" href="/"><i class="ti ti-home"></i></a>
+                            </span>
+                            <!-- <span class="ttm-bread-sep">&nbsp; / &nbsp;</span>
+                                <span><span>Wiring And Installation</span></span> -->
+                        </div>
+                    </div>
+                </div><!-- /.col-md-12 -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </div><!-- page-title end-->
+
+    <!--site-main start-->
+    <div class="site-main">
+
+        <!-- sidebar -->
+        <div class="sidebar ttm-sidebar-left ttm-bgcolor-white break-991-colum clearfix">
+            <div class="container">
+                <!-- row -->
+                <div class="row">
+                    {% include 'web/partials/sidenavbar.html' %}
+                    <div class="col-lg-9 content-area">
+                        <!-- ttm-service-single-content-are -->
+                        <div class="ttm-service-single-content-area">
+                            <h3>TILING</h3>
+                            <div class="ttm_single_image-wrapper mb-35">
+                                <img class="img-fluid" src="{% static 'web/images/service-single/ac service.jpg' %}"
+                                    alt="">
+                            </div>
+                            <div class="ttm-service-description">
+                                <div class="mb-35">
+                                    <p>In this modern world, there are many options for modifying your floor. Giving the
+                                        most adequate to your construction will enhance the total appearance and it also
+                                        helps in simplifying the cleaning processes. Being one of the leading service
+                                        providers in UAE we look forward to delivering the most excellent services for
+                                        your best tiling needs.</p>
+
+                                    <p>
+                                        Decorative tiles are manufactured furnishings that are commonly used to cover
+                                        interior walls, ceilings, and floors. The tiles can be simple and functional or
+                                        they can be decorative and elaborate (such as mosaics). In addition to ceramic,
+                                        porcelain, stone, marble, clay, slate, and glass, tiles can also be made from a
+                                        wide range of other substances. It's important to remove any adhesive, mortar,
+                                        etc. from your floor before you install tiles.
+                                        <ul>
+                                            <li>Durable products.</li>
+                                            <li>Beautify your construction.</li>
+                                            <li>Smoothness to the floor.</li>
+                                            <li>Low maintenance.</li>
+                                            <li>Wide range of choices.</li>
+                                            <li>Hypoallergenic - A perfect choice for those who suffer from allergies.</li>
+                                        </ul>
+                                    </p>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <!-- ttm-service-single-content-are end -->
+                    </div>
+
+                </div><!-- row end -->
+            </div>
+        </div>
+        <!-- sidebar end -->
+
+
+    </div>
+    <!--site-main end-->
+
+
+
+</div><!-- page end -->
+
+
+{% endblock %}

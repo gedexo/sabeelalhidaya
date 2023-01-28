@@ -1,0 +1,101 @@
+{% extends 'web/base-two.html' %}
+{% load static %}
+{% block content %}
+
+<!--page start-->
+<div class="page sidebar-true">
+
+    <!-- page-title -->
+    <div class="ttm-page-title-row">
+        <div class="ttm-page-title-row-bg-layer ttm-bg-layer"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="title-box ttm-textcolor-white">
+                        <div class="page-title-heading">
+                            <h1 class="title">ELECTRICALS</h1>
+                        </div>
+                        <div class="breadcrumb-wrapper">
+                            <span>
+                                <a title="Homepage" href="/"><i class="ti ti-home"></i></a>
+                            </span>
+                            <!-- <span class="ttm-bread-sep">&nbsp; / &nbsp;</span>
+                                <span><span>ELECTRICALS</span></span> -->
+                        </div>
+                    </div>
+                </div><!-- /.col-md-12 -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </div><!-- page-title end-->
+
+    <!--site-main start-->
+    <div class="site-main">
+
+        <!-- sidebar -->
+        <div class="sidebar ttm-sidebar-left ttm-bgcolor-white break-991-colum clearfix">
+            <div class="container">
+                <!-- row -->
+                <div class="row">
+                    {% include 'web/partials/sidenavbar.html' %}
+                    <div class="col-lg-9 content-area">
+
+                        <div class="ttm-service-single-content-area">
+                            <h3>ELECTRICALS</h3>
+                            <div class="ttm_single_image-wrapper mb-35">
+                                <img class="img-fluid" src="{% static 'web/images/service-single/electrical.jpg' %}"
+                                    alt="">
+                            </div>
+                            <div class="ttm-service-description">
+                                <div class="mb-35">
+                                    <p class="text-justify">For the safety and proper functioning of every residential,
+                                        a proper and
+                                        well-established electrical system is a must. Every construction requires
+                                        electricity for one or another purpose, with the finest electrical services more
+                                        benefits can be added to your projects. The technical team of SHTS look forward
+                                        to delivering the best electrical services for everyone.</p>
+
+                                    <p class="text-justify">
+                                        Electrical fittings are a very important aspect of home safety and utility. If
+                                        fitted correctly, they help save you power, keep your home free from fire
+                                        hazards, and also ensure that your other costly electrical/electronic equipment
+                                        has a longer life. Carrying out your own electrical work can be tempting.
+                                        There’s a lot of conflicting advice out there regarding what we’re allowed to do
+                                        ourselves and what has to be left to a professional. Nevertheless, owing to
+                                        carelessness or a lack of knowledge, more money may have to be shelled out later
+                                        to put things right and, more seriously, it can lead to injury, which can be
+                                        fatal. So, our advice is to leave it to the experts, and that’s where we come
+                                        in.
+
+                                        <ul>
+                                            <li>Proper wiring system. </li>
+                                            <li>Enhances safety. </li>
+                                            <li>Reducing damage risks.</li>
+                                            <li>Avoid short circuit damages. </li>
+                                            <li>Stick to the budget.</li>
+                                            <li>Reduce energy consumption.</li>
+                                            
+                                        </ul>
+                                    </p>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+
+
+</div>
+
+
+{% endblock %}

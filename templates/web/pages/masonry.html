@@ -1,0 +1,88 @@
+{% extends 'web/base-two.html' %}
+{% load static %}
+{% block content %}
+
+<!--page start-->
+<div class="page sidebar-true">
+
+
+
+
+    <!-- page-title -->
+    <div class="ttm-page-title-row">
+        <div class="ttm-page-title-row-bg-layer ttm-bg-layer"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="title-box ttm-textcolor-white">
+                        <div class="page-title-heading">
+                            <h1 class="title">MASONRY</h1>
+                        </div><!-- /.page-title-captions -->
+                        <div class="breadcrumb-wrapper">
+                            <span>
+                                <a title="Homepage" href="/"><i class="ti ti-home"></i></a>
+                            </span>
+                            <span class="ttm-bread-sep">&nbsp; / &nbsp;</span>
+                            <span><span>MASONRY</span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--site-main start-->
+    <div class="site-main">
+
+        <!-- sidebar -->
+        <div class="sidebar ttm-sidebar-left ttm-bgcolor-white break-991-colum clearfix">
+            <div class="container">
+                <!-- row -->
+                <div class="row">
+                    {% include 'web/partials/sidenavbar.html' %}
+                    <div class="col-lg-9 content-area">
+                        <!-- ttm-service-single-content-are -->
+                        <div class="ttm-service-single-content-area">
+                            <h3>MASONRY</h3>
+                            <div class="ttm_single_image-wrapper mb-35">
+                                <img class="img-fluid" src="{% static 'web/images/service-single/masonry.jpg' %}"
+                                    alt="">
+                            </div>
+                            <div class="ttm-service-description">
+                                <div class="mb-35">
+                                    <p>SHTS undertakes the art and craftwork of construction and fabricating in stone,
+                                        clay, brick, or concrete block that brings a strong base and partition to your
+                                        buildings. Masonry works are necessary when it comes to construction. Small
+                                        scale or large scale, we deliver exceptional services for your masonry
+                                        requirements.</p>
+
+                                    <p>
+                                        Masonry is both the construction of stone or brick structures and also the
+                                        process by which these structures are created. Construction and fabrication of
+                                        stone, clay, brick, or concrete blocks through the art and craft of masonry.
+                                        Masonry is often considered reinforced or unreinforced concrete construction.
+
+                                        <ul>
+                                            <li>Weather resistance - Masonry walls can withstand heavy storms, heat, and cold.</li>
+                                            <li>Shield from termites, rotting and fungus.</li>
+                                            <li>Maintenance-free. Masonry is a long-lasting and low maintenance material.
+                                                Adding value to your construction.</li>
+                                            <li>Non-combustible property assists in fire protection</li>
+                                        </ul>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</div><!-- page end -->
+
+
+{% endblock %}

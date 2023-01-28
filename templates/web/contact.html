@@ -1,0 +1,123 @@
+{% extends 'web/base-two.html' %}
+{% load static %}
+{% block content %}
+
+<!--site-main start-->
+<div class="site-main">
+
+    <div class="ttm-row map-section ttm-bgcolor-white">
+        <div class="map-wrapper">
+            <div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3605.291982899477!2d55.394510315012816!3d25.361528983820065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6414589fc217293a!2zMjXCsDIxJzQxLjUiTiA1NcKwMjMnNDguMSJF!5e0!3m2!1sen!2sin!4v1652152328249!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <section class="ttm-row pb-160 res-991-pb-100 clearfix">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7 pr-60 res-767-pr-15">
+                    <!-- section title -->
+                    <div class="section-title with-desc clearfix">
+                        <div class="title-header">
+                            <h5>GET IN TOUCH</h5>
+                            <h2 class="title">Contact Us</h2>
+                        </div>
+                        <div class="title-desc">We are a team of professional and skilled experts offering a wide range of services for everyone.</div>
+                    </div><!-- section title end -->
+                    <form id="ttm-contactform" class="ttm-contactform wrap-form clearfix ajax" method="POST" action="#">
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <label>
+                                    <span class="text-input"><i class="ttm-textcolor-skincolor ti-user"></i>
+                                        {{forms.name}}
+
+                                        <!-- <input name="your-name" type="text" value="" placeholder="Your Name"
+                                            required="required"> -->
+                                        </span>
+                                </label>
+                            </div>
+                            <div class="col-lg-6">
+                                <label>
+                                    <span class="text-input"><i class="ttm-textcolor-skincolor ti-mobile"></i>
+                                        {{forms.phone}}
+                                        <!-- <input name="your-phone" type="text" value="" placeholder="Cell Phone"
+                                            required="required"> -->
+                                        </span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <label>
+                                    <span class="text-input"><i class="ttm-textcolor-skincolor ti-email"></i>
+                                        {{forms.email}}
+                                        <!-- <input
+                                            name="email" type="email" value="" placeholder="Email"
+                                            required="required"> -->
+
+                                        </span>
+                                </label>
+                            </div>
+                            <div class="col-lg-6">
+                                <label>
+                                    <span class="text-input"><i
+                                            class="ttm-textcolor-skincolor ti-location-pin"></i>
+                                            {{forms.address}}
+                                            <!-- <input name="venue" type="text" value="" placeholder="Venue" required="required"> -->
+                                        </span>
+                                </label>
+                            </div>
+                        </div>
+                        <label>
+                            <span class="text-input"><i class="ttm-textcolor-skincolor ti-comment"></i>
+                                <!-- <textarea
+                                    name="message" cols="40" placeholder="Message"
+                                    required="required"></textarea> -->
+                                    {{forms.message}}
+                                
+                                </span>
+                        </label>
+                        <input name="submit" type="submit" id="submit"
+                            class="submit ttm-btn ttm-btn-size-md ttm-btn-shape-square ttm-btn-style-border ttm-btn-color-black"
+                            value="MAKE A RESERVATION">
+                    </form>
+                </div>
+                <div class="col-md-5">
+                    <div class="ttm-rounded-shadow-box pt-40 pr-50 pb-55 pl-50 box-shadow2 res-767-mt-40 clearfix">
+                        <h4>Contact Info</h4>
+                        <ul class="ttm_contact_widget_wrapper">
+                            <li><i class="ttm-textcolor-skincolor ti ti-location-pin"></i>Al Zara building, Near Al Fardan exchange, Sharjah, UAE</li>
+                            <li><i class="ttm-textcolor-skincolor ti ti-mobile"></i>0507 771 996 <br>0552 705 394</li>
+                            <li><i class="ttm-textcolor-skincolor ti ti-comment"></i><a
+                                    href="mailto:info@sabeelalhidaya.com">info@sabeelalhidaya.com</a></li>
+                            <!-- <li><i class="ttm-textcolor-skincolor ti ti-world"></i><a
+                                    href="http://www.example.com/">http://www.example.com</a></li> -->
+                        </ul>
+                        <div class="social-icons circle social-hover">
+                            <ul class="list-inline">
+                                <li class="social-facebook"><a class="tooltip-top ttm-textcolor-skincolor"
+                                        target="_blank" href="#" data-tooltip="Facebook"><i class="fa fa-facebook"
+                                            aria-hidden="true"></i></a></li>
+                                <li class="social-twitter"><a class="tooltip-top ttm-textcolor-skincolor"
+                                        target="_blank" href="#" data-tooltip="Twitter"><i class="fa fa-twitter"
+                                            aria-hidden="true"></i></a></li>
+                                <li class="social-gplus"><a class=" tooltip-top ttm-textcolor-skincolor" target="_blank"
+                                        href="#" data-tooltip="Google+"><i class="fa fa-google-plus"
+                                            aria-hidden="true"></i></a></li>
+                                <li class="social-linkedin"><a class=" tooltip-top ttm-textcolor-skincolor"
+                                        target="_blank" href="#" data-tooltip="LinkedIn"><i class="fa fa-linkedin"
+                                            aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- row end -->
+        </div>
+    </section>
+
+</div>
+<!--site-main end-->
+
+{% endblock %}

@@ -1,0 +1,749 @@
+{% extends 'web/base-two.html' %}
+{% load static %}
+{% block content %}
+
+
+        <!-- page-title -->
+        <div class="ttm-page-title-row">
+            <div class="ttm-page-title-row-bg-layer ttm-bg-layer"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="title-box ttm-textcolor-white">
+                            <div class="page-title-heading">
+                                <h1 class="title">Gallery</h1>
+                            </div><!-- /.page-title-captions -->
+                            <div class="breadcrumb-wrapper">
+                                <span>
+                                    <a title="Homepage" href="/"><i class="ti ti-home"></i></a>
+                                </span>
+                                <span class="ttm-bread-sep">&nbsp; / &nbsp;</span>
+                                <span><span>Gallery</span></span>
+                            </div>
+                        </div>
+                    </div><!-- /.col-md-12 -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </div><!-- page-title end-->
+
+        <!--site-main start-->
+        <div class="site-main">
+
+            <section class="ttm-row pt-60 pb-140 res-991-pb-100 ttm-bgcolor-grey clearfix">
+                <div class="container">
+                    <!-- row -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h2><strong>Our Latest Projects</strong></h2>
+                            <p class="mb-55">Below you’ll see our best industrial projects.&nbsp; We are
+                                providing&nbsp;never ending customer support also provide guarantee a very high level of
+                                satisfaction for our clients.&nbsp;&nbsp;if you have a question&nbsp; don’t hesitate to
+                                email us at </p>
+                        </div>
+                    </div><!-- row end -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="ttm-tabs">
+                                
+                                <!-- <ul class="tabs text-right">
+                                    <li class="tab active"><a href="#"> All </a></li>
+                                    <li class="tab"><a href="#">Painting</a></li>
+                                    <li class="tab"><a href="#">Plumbing</a></li>
+                                    <li class="tab"><a href="#">Home Maintenance</a></li>
+                                    <li class="tab"><a href="#">Flooring</a></li>
+                                    <li class="tab"><a href="#">Electrical</a></li>
+                                    <li class="tab"><a href="#">Roofing</a></li>
+                                    <li class="tab"><a href="#">Heating</a></li>
+                                </ul> -->
+                                <!-- flat-tab end -->
+
+
+
+                                <div class="content-tab pt-20">
+                                    <!-- content-inner -->
+
+                                    <div class="content-inner active">
+                                        <div class="row multi-columns-row ttm-boxes-spacing-10px">
+                                            {% for gallery in galleries %}
+                                            <div class="ttm-box-col-wrapper col-lg-4 col-md-6 col-sm-12">
+                                                <!-- featured-imagebox -->
+                                                <div class="featured-imagebox featured-imagebox-portfolio">
+                                                    <!-- featured-thumbnail -->
+                                                    <div class="featured-thumbnail">
+                                                        <a href="#"> <img class="img-fluid"
+                                                                src="{{gallery.image.crop.371x278}}" alt="image"></a>
+                                                    </div><!-- featured-thumbnail end-->
+                                                    <!-- ttm-box-view-overlay -->
+                                                    <div class="ttm-box-view-overlay ttm-portfolio-box-view-overlay">
+                                                        <div class="ttm-box-view-content-inner">
+                                                            <div class="featured-content featured-content-portfolio">
+                                                                <!-- <span class="category">
+                                                                    <a href="#">Painting</a>,
+                                                                    <a href="#">Plumbing</a>
+                                                                </span> -->
+                                                                <h2 class="featured-title"><a
+                                                                        href="#">{{gallery.title}}</a></h2>
+                                                            </div>
+                                                        </div>
+                                                    </div><!-- ttm-box-view-overlay end-->
+                                                </div><!-- featured-imagebox -->
+                                            </div>
+                                            {% endfor %}
+
+
+                                            {% comment %}
+                                            <div class="ttm-box-col-wrapper col-lg-4 col-md-6 col-sm-12">
+                                                <!-- featured-imagebox -->
+                                                <div class="featured-imagebox featured-imagebox-portfolio">
+                                                    <!-- featured-thumbnail -->
+                                                    <div class="featured-thumbnail">
+                                                        <a href="#"> <img class="img-fluid"
+                                                                src="{% static 'web/images/portfolio/02.jpg' %}" alt="image"></a>
+                                                    </div><!-- featured-thumbnail end-->
+                                                    <!-- ttm-box-view-overlay -->
+                                                    <div class="ttm-box-view-overlay ttm-portfolio-box-view-overlay">
+                                                        <div class="ttm-box-view-content-inner">
+                                                            <div class="featured-content featured-content-portfolio">
+                                                                <span class="category">
+                                                                    <a href="#">Tiles repair,
+                                                                        Austin</a>
+                                                                </span>
+                                                                <h2 class="featured-title"><a
+                                                                        href="#">Home
+                                                                        Maintenance</a></h2>
+                                                            </div>
+                                                        </div>
+                                                    </div><!-- ttm-box-view-overlay end-->
+                                                </div><!-- featured-imagebox -->
+                                            </div>
+                                            <div class="ttm-box-col-wrapper col-lg-4 col-md-6 col-sm-12">
+                                                <!-- featured-imagebox -->
+                                                <div class="featured-imagebox featured-imagebox-portfolio">
+                                                    <!-- featured-thumbnail -->
+                                                    <div class="featured-thumbnail">
+                                                        <a href="#"> <img class="img-fluid"
+                                                                src="{% static 'web/images/portfolio/03.jpg' %}" alt="image"></a>
+                                                    </div><!-- featured-thumbnail end-->
+                                                    <!-- ttm-box-view-overlay -->
+                                                    <div class="ttm-box-view-overlay ttm-portfolio-box-view-overlay">
+                                                        <div class="ttm-box-view-content-inner">
+                                                            <div class="featured-content featured-content-portfolio">
+                                                                <span class="category">
+                                                                    <a href="#">Flooring</a>,
+                                                                    <a href="#">Plumbing</a>
+                                                                </span>
+                                                                <h2 class="featured-title"><a
+                                                                        href="#">Floor Flooring,
+                                                                        Bunnell</a></h2>
+                                                            </div>
+                                                        </div>
+                                                    </div><!-- ttm-box-view-overlay end-->
+                                                </div><!-- featured-imagebox -->
+                                            </div>
+                                            <div class="ttm-box-col-wrapper col-lg-4 col-md-6 col-sm-12">
+                                                <!-- featured-imagebox -->
+                                                <div class="featured-imagebox featured-imagebox-portfolio">
+                                                    <!-- featured-thumbnail -->
+                                                    <div class="featured-thumbnail">
+                                                        <a href="#"> <img class="img-fluid"
+                                                                src="{% static 'web/images/portfolio/04.jpg' %}" alt="image"></a>
+                                                    </div><!-- featured-thumbnail end-->
+                                                    <!-- ttm-box-view-overlay -->
+                                                    <div class="ttm-box-view-overlay ttm-portfolio-box-view-overlay">
+                                                        <div class="ttm-box-view-content-inner">
+                                                            <div class="featured-content featured-content-portfolio">
+                                                                <span class="category">
+                                                                    <a href="#">Flooring</a>,
+                                                                    <a href="#">Home
+                                                                        Maintenance</a>
+                                                                </span>
+                                                                <h2 class="featured-title"><a
+                                                                        href="#">Drywall
+                                                                        Insulation, Captown</a></h2>
+                                                            </div>
+                                                        </div>
+                                                    </div><!-- ttm-box-view-overlay end-->
+                                                </div><!-- featured-imagebox -->
+                                            </div>
+                                            <div class="ttm-box-col-wrapper col-lg-4 col-md-6 col-sm-12">
+                                                <!-- featured-imagebox -->
+                                                <div class="featured-imagebox featured-imagebox-portfolio">
+                                                    <!-- featured-thumbnail -->
+                                                    <div class="featured-thumbnail">
+                                                        <a href="#"> <img class="img-fluid"
+                                                                src="{% static 'web/images/portfolio/05.jpg' %}" alt="image"></a>
+                                                    </div><!-- featured-thumbnail end-->
+                                                    <!-- ttm-box-view-overlay -->
+                                                    <div class="ttm-box-view-overlay ttm-portfolio-box-view-overlay">
+                                                        <div class="ttm-box-view-content-inner">
+                                                            <div class="featured-content featured-content-portfolio">
+                                                                <span class="category">
+                                                                    <a href="#">Electrical</a>,
+                                                                    <a href="#">Painting</a>
+                                                                </span>
+                                                                <h2 class="featured-title"><a
+                                                                        href="#">Electrical wiring,
+                                                                        San Jose</a></h2>
+                                                            </div>
+                                                        </div>
+                                                    </div><!-- ttm-box-view-overlay end-->
+                                                </div><!-- featured-imagebox -->
+                                            </div>
+                                            <div class="ttm-box-col-wrapper col-lg-4 col-md-6 col-sm-12">
+                                                <!-- featured-imagebox -->
+                                                <div class="featured-imagebox featured-imagebox-portfolio">
+                                                    <!-- featured-thumbnail -->
+                                                    <div class="featured-thumbnail">
+                                                        <a href="#"> <img class="img-fluid"
+                                                                src="{% static 'web/images/portfolio/06.jpg' %}" alt="image"></a>
+                                                    </div><!-- featured-thumbnail end -->
+                                                    <!-- ttm-box-view-overlay -->
+                                                    <div class="ttm-box-view-overlay ttm-portfolio-box-view-overlay">
+                                                        <div class="ttm-box-view-content-inner">
+                                                            <div class="featured-content featured-content-portfolio">
+                                                                <span class="category">
+                                                                    <a href="#">Electrical</a>,
+                                                                    <a href="#">Home
+                                                                        Maintenance</a>
+                                                                </span>
+                                                                <h2 class="featured-title"><a
+                                                                        href="#">Fireplace
+                                                                        cleaning, Portland</a></h2>
+                                                            </div>
+                                                        </div>
+                                                    </div><!-- ttm-box-view-overlay end-->
+                                                </div><!-- featured-imagebox -->
+                                            </div>
+                                            <div class="ttm-box-col-wrapper col-lg-4 col-md-6 col-sm-12">
+                                                <!-- featured-imagebox -->
+                                                <div class="featured-imagebox featured-imagebox-portfolio">
+                                                    <!-- featured-thumbnail -->
+                                                    <div class="featured-thumbnail">
+                                                        <a href="#"> <img class="img-fluid"
+                                                                src="{% static 'web/images/portfolio/07.jpg' %}" alt="image"></a>
+                                                    </div><!-- featured-thumbnail end -->
+                                                    <!-- ttm-box-view-overlay -->
+                                                    <div class="ttm-box-view-overlay ttm-portfolio-box-view-overlay">
+                                                        <div class="ttm-box-view-content-inner">
+                                                            <div class="featured-content featured-content-portfolio">
+                                                                <span class="category">
+                                                                    <a href="#">Electrical</a>,
+                                                                    <a href="#">Roofing</a>
+                                                                </span>
+                                                                <h2 class="featured-title"><a
+                                                                        href="#">Roofing,
+                                                                        Berlin</a></h2>
+                                                            </div>
+                                                        </div>
+                                                    </div><!-- ttm-box-view-overlay end-->
+                                                </div><!-- featured-imagebox -->
+                                            </div>
+                                            <div class="ttm-box-col-wrapper col-lg-4 col-md-6 col-sm-12">
+                                                <!-- featured-imagebox -->
+                                                <div class="featured-imagebox featured-imagebox-portfolio">
+                                                    <!-- featured-thumbnail -->
+                                                    <div class="featured-thumbnail">
+                                                        <a href="#"> <img class="img-fluid"
+                                                                src="{% static 'web/images/portfolio/08.jpg' %}" alt="image"></a>
+                                                    </div><!-- featured-thumbnail end -->
+                                                    <!-- ttm-box-view-overlay -->
+                                                    <div class="ttm-box-view-overlay ttm-portfolio-box-view-overlay">
+                                                        <div class="ttm-box-view-content-inner">
+                                                            <div class="featured-content featured-content-portfolio">
+                                                                <span class="category">
+                                                                    <a href="#">Heating</a>,
+                                                                    <a href="#">Plumbing</a>
+                                                                </span>
+                                                                <h2 class="featured-title"><a
+                                                                        href="#">Heating system
+                                                                        tune-up, Manham</a></h2>
+                                                            </div>
+                                                        </div>
+                                                    </div><!-- ttm-box-view-overlay end-->
+                                                </div><!-- featured-imagebox -->
+                                            </div>
+                                            <div class="ttm-box-col-wrapper col-lg-4 col-md-6 col-sm-12">
+                                                <!-- featured-imagebox -->
+                                                <div class="featured-imagebox featured-imagebox-portfolio">
+                                                    <!-- featured-thumbnail -->
+                                                    <div class="featured-thumbnail">
+                                                        <a href="#"> <img class="img-fluid"
+                                                                src="{% static 'web/images/portfolio/09.jpg' %}" alt="image"></a>
+                                                    </div><!-- featured-thumbnail end -->
+                                                    <!-- ttm-box-view-overlay -->
+                                                    <div class="ttm-box-view-overlay ttm-portfolio-box-view-overlay">
+                                                        <div class="ttm-box-view-content-inner">
+                                                            <div class="featured-content featured-content-portfolio">
+                                                                <span class="category">
+                                                                    <a href="#">Heating</a>,
+                                                                    <a href="#">Roofing</a>
+                                                                </span>
+                                                                <h2 class="featured-title"><a
+                                                                        href="#">Sealing driveways,
+                                                                        New York</a></h2>
+                                                            </div>
+                                                        </div>
+                                                    </div><!-- ttm-box-view-overlay end-->
+                                                </div><!-- featured-imagebox -->
+                                            </div>
+                                            {% endcomment %}
+                                        </div><!-- row end -->
+                                    </div>
+
+
+
+                                    {% comment %}
+                                    <div class="content-inner">
+                                        <div class="row multi-columns-row ttm-boxes-spacing-5px">
+                                            <div class="ttm-box-col-wrapper col-lg-4 col-md-6 col-sm-12">
+                                                <!-- featured-imagebox -->
+                                                <div class="featured-imagebox featured-imagebox-portfolio">
+                                                    <!-- featured-thumbnail -->
+                                                    <div class="featured-thumbnail">
+                                                        <a href="#"> <img class="img-fluid"
+                                                                src="{% static 'web/images/portfolio/01.jpg' %}" alt="image"></a>
+                                                    </div><!-- featured-thumbnail end-->
+                                                    <!-- ttm-box-view-overlay -->
+                                                    <div class="ttm-box-view-overlay ttm-portfolio-box-view-overlay">
+                                                        <div class="ttm-box-view-content-inner">
+                                                            <div class="featured-content featured-content-portfolio">
+                                                                <span class="category">
+                                                                    <a href="#">Painting</a>,
+                                                                    <a href="#">Plumbing</a>
+                                                                </span>
+                                                                <h2 class="featured-title"><a
+                                                                        href="#">Plumbing, New
+                                                                        York</a></h2>
+                                                            </div>
+                                                        </div>
+                                                    </div><!-- ttm-box-view-overlay end-->
+                                                </div><!-- featured-imagebox -->
+                                            </div>
+                                            <div class="ttm-box-col-wrapper col-lg-4 col-md-6 col-sm-12">
+                                                <!-- featured-imagebox -->
+                                                <div class="featured-imagebox featured-imagebox-portfolio">
+                                                    <!-- featured-thumbnail -->
+                                                    <div class="featured-thumbnail">
+                                                        <a href="#"> <img class="img-fluid"
+                                                                src="{% static 'web/images/portfolio/05.jpg' %}" alt="image"></a>
+                                                    </div><!-- featured-thumbnail end-->
+                                                    <!-- ttm-box-view-overlay -->
+                                                    <div class="ttm-box-view-overlay ttm-portfolio-box-view-overlay">
+                                                        <div class="ttm-box-view-content-inner">
+                                                            <div class="featured-content featured-content-portfolio">
+                                                                <span class="category">
+                                                                    <a href="#">Electrical</a>,
+                                                                    <a href="#">Painting</a>
+                                                                </span>
+                                                                <h2 class="featured-title"><a
+                                                                        href="#">Electrical wiring,
+                                                                        San Jose</a></h2>
+                                                            </div>
+                                                        </div>
+                                                    </div><!-- ttm-box-view-overlay end-->
+                                                </div><!-- featured-imagebox -->
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="content-inner">
+                                        <div class="row multi-columns-row ttm-boxes-spacing-5px">
+                                            <div class="ttm-box-col-wrapper col-lg-4 col-md-6 col-sm-12">
+                                                <!-- featured-imagebox -->
+                                                <div class="featured-imagebox featured-imagebox-portfolio">
+                                                    <!-- featured-thumbnail -->
+                                                    <div class="featured-thumbnail">
+                                                        <a href="#"> <img class="img-fluid"
+                                                                src="{% static 'web/images/portfolio/01.jpg' %}" alt="image"></a>
+                                                    </div><!-- featured-thumbnail end-->
+                                                    <!-- ttm-box-view-overlay -->
+                                                    <div class="ttm-box-view-overlay ttm-portfolio-box-view-overlay">
+                                                        <div class="ttm-box-view-content-inner">
+                                                            <div class="featured-content featured-content-portfolio">
+                                                                <span class="category">
+                                                                    <a href="#">Painting</a>,
+                                                                    <a href="#">Plumbing</a>
+                                                                </span>
+                                                                <h2 class="featured-title"><a
+                                                                        href="#">Plumbing, New
+                                                                        York</a></h2>
+                                                            </div>
+                                                        </div>
+                                                    </div><!-- ttm-box-view-overlay end-->
+                                                </div><!-- featured-imagebox -->
+                                            </div>
+                                            <div class="ttm-box-col-wrapper col-lg-4 col-md-6 col-sm-12">
+                                                <!-- featured-imagebox -->
+                                                <div class="featured-imagebox featured-imagebox-portfolio">
+                                                    <!-- featured-thumbnail -->
+                                                    <div class="featured-thumbnail">
+                                                        <a href="#"> <img class="img-fluid"
+                                                                src="{% static 'web/images/portfolio/03.jpg' %}" alt="image"></a>
+                                                    </div><!-- featured-thumbnail end-->
+                                                    <!-- ttm-box-view-overlay -->
+                                                    <div class="ttm-box-view-overlay ttm-portfolio-box-view-overlay">
+                                                        <div class="ttm-box-view-content-inner">
+                                                            <div class="featured-content featured-content-portfolio">
+                                                                <span class="category">
+                                                                    <a href="#">Flooring</a>,
+                                                                    <a href="#">Plumbing</a>
+                                                                </span>
+                                                                <h2 class="featured-title"><a
+                                                                        href="#">Floor Flooring,
+                                                                        Bunnell</a></h2>
+                                                            </div>
+                                                        </div>
+                                                    </div><!-- ttm-box-view-overlay end-->
+                                                </div><!-- featured-imagebox -->
+                                            </div>
+                                            <div class="ttm-box-col-wrapper col-lg-4 col-md-6 col-sm-12">
+                                                <!-- featured-imagebox -->
+                                                <div class="featured-imagebox featured-imagebox-portfolio">
+                                                    <!-- featured-thumbnail -->
+                                                    <div class="featured-thumbnail">
+                                                        <a href="#"> <img class="img-fluid"
+                                                                src="{% static 'web/images/portfolio/08.jpg' %}" alt="image"></a>
+                                                    </div><!-- featured-thumbnail end -->
+                                                    <!-- ttm-box-view-overlay -->
+                                                    <div class="ttm-box-view-overlay ttm-portfolio-box-view-overlay">
+                                                        <div class="ttm-box-view-content-inner">
+                                                            <div class="featured-content featured-content-portfolio">
+                                                                <span class="category">
+                                                                    <a href="#">Heating</a>,
+                                                                    <a href="#">Plumbing</a>
+                                                                </span>
+                                                                <h2 class="featured-title"><a
+                                                                        href="#">Heating system
+                                                                        tune-up, Manham</a></h2>
+                                                            </div>
+                                                        </div>
+                                                    </div><!-- ttm-box-view-overlay end-->
+                                                </div><!-- featured-imagebox -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content-inner">
+                                        <div class="row multi-columns-row ttm-boxes-spacing-5px">
+                                            <div class="ttm-box-col-wrapper col-lg-4 col-md-6 col-sm-12">
+                                                <!-- featured-imagebox -->
+                                                <div class="featured-imagebox featured-imagebox-portfolio">
+                                                    <!-- featured-thumbnail -->
+                                                    <div class="featured-thumbnail">
+                                                        <a href="#"> <img class="img-fluid"
+                                                                src="{% static 'web/images/portfolio/02.jpg' %}" alt="image"></a>
+                                                    </div><!-- featured-thumbnail end-->
+                                                    <!-- ttm-box-view-overlay -->
+                                                    <div class="ttm-box-view-overlay ttm-portfolio-box-view-overlay">
+                                                        <div class="ttm-box-view-content-inner">
+                                                            <div class="featured-content featured-content-portfolio">
+                                                                <span class="category">
+                                                                    <a href="#">Tiles repair,
+                                                                        Austin</a>
+                                                                </span>
+                                                                <h2 class="featured-title"><a
+                                                                        href="#">Home
+                                                                        Maintenance</a></h2>
+                                                            </div>
+                                                        </div>
+                                                    </div><!-- ttm-box-view-overlay end-->
+                                                </div><!-- featured-imagebox -->
+                                            </div>
+                                            <div class="ttm-box-col-wrapper col-lg-4 col-md-6 col-sm-12">
+                                                <!-- featured-imagebox -->
+                                                <div class="featured-imagebox featured-imagebox-portfolio">
+                                                    <!-- featured-thumbnail -->
+                                                    <div class="featured-thumbnail">
+                                                        <a href="#"> <img class="img-fluid"
+                                                                src="{% static 'web/images/portfolio/04.jpg' %}" alt="image"></a>
+                                                    </div><!-- featured-thumbnail end-->
+                                                    <!-- ttm-box-view-overlay -->
+                                                    <div class="ttm-box-view-overlay ttm-portfolio-box-view-overlay">
+                                                        <div class="ttm-box-view-content-inner">
+                                                            <div class="featured-content featured-content-portfolio">
+                                                                <span class="category">
+                                                                    <a href="#">Flooring</a>,
+                                                                    <a href="#">Home
+                                                                        Maintenance</a>
+                                                                </span>
+                                                                <h2 class="featured-title"><a
+                                                                        href="#">Drywall
+                                                                        Insulation, Captown</a></h2>
+                                                            </div>
+                                                        </div>
+                                                    </div><!-- ttm-box-view-overlay end-->
+                                                </div><!-- featured-imagebox -->
+                                            </div>
+                                            <div class="ttm-box-col-wrapper col-lg-4 col-md-6 col-sm-12">
+                                                <!-- featured-imagebox -->
+                                                <div class="featured-imagebox featured-imagebox-portfolio">
+                                                    <!-- featured-thumbnail -->
+                                                    <div class="featured-thumbnail">
+                                                        <a href="#"> <img class="img-fluid"
+                                                                src="{% static 'web/images/portfolio/06.jpg' %}" alt="image"></a>
+                                                    </div><!-- featured-thumbnail end -->
+                                                    <!-- ttm-box-view-overlay -->
+                                                    <div class="ttm-box-view-overlay ttm-portfolio-box-view-overlay">
+                                                        <div class="ttm-box-view-content-inner">
+                                                            <div class="featured-content featured-content-portfolio">
+                                                                <span class="category">
+                                                                    <a href="#">Electrical</a>,
+                                                                    <a href="#">Home
+                                                                        Maintenance</a>
+                                                                </span>
+                                                                <h2 class="featured-title"><a
+                                                                        href="#">Fireplace
+                                                                        cleaning, Portland</a></h2>
+                                                            </div>
+                                                        </div>
+                                                    </div><!-- ttm-box-view-overlay end-->
+                                                </div><!-- featured-imagebox -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content-inner">
+                                        <div class="row multi-columns-row ttm-boxes-spacing-5px">
+                                            <div class="ttm-box-col-wrapper col-lg-4 col-md-6 col-sm-12">
+                                                <!-- featured-imagebox -->
+                                                <div class="featured-imagebox featured-imagebox-portfolio">
+                                                    <!-- featured-thumbnail -->
+                                                    <div class="featured-thumbnail">
+                                                        <a href="#"> <img class="img-fluid"
+                                                                src="{% static 'web/images/portfolio/03.jpg' %}" alt="image"></a>
+                                                    </div><!-- featured-thumbnail end-->
+                                                    <!-- ttm-box-view-overlay -->
+                                                    <div class="ttm-box-view-overlay ttm-portfolio-box-view-overlay">
+                                                        <div class="ttm-box-view-content-inner">
+                                                            <div class="featured-content featured-content-portfolio">
+                                                                <span class="category">
+                                                                    <a href="#">Flooring</a>,
+                                                                    <a href="#">Plumbing</a>
+                                                                </span>
+                                                                <h2 class="featured-title"><a
+                                                                        href="#">Floor Flooring,
+                                                                        Bunnell</a></h2>
+                                                            </div>
+                                                        </div>
+                                                    </div><!-- ttm-box-view-overlay end-->
+                                                </div><!-- featured-imagebox -->
+                                            </div>
+                                            <div class="ttm-box-col-wrapper col-lg-4 col-md-6 col-sm-12">
+                                                <!-- featured-imagebox -->
+                                                <div class="featured-imagebox featured-imagebox-portfolio">
+                                                    <!-- featured-thumbnail -->
+                                                    <div class="featured-thumbnail">
+                                                        <a href="#"> <img class="img-fluid"
+                                                                src="{% static 'web/images/portfolio/04.jpg' %}" alt="image"></a>
+                                                    </div><!-- featured-thumbnail end-->
+                                                    <!-- ttm-box-view-overlay -->
+                                                    <div class="ttm-box-view-overlay ttm-portfolio-box-view-overlay">
+                                                        <div class="ttm-box-view-content-inner">
+                                                            <div class="featured-content featured-content-portfolio">
+                                                                <span class="category">
+                                                                    <a href="#">Flooring</a>,
+                                                                    <a href="#">Home
+                                                                        Maintenance</a>
+                                                                </span>
+                                                                <h2 class="featured-title"><a
+                                                                        href="#">Drywall
+                                                                        Insulation, Captown</a></h2>
+                                                            </div>
+                                                        </div>
+                                                    </div><!-- ttm-box-view-overlay end-->
+                                                </div><!-- featured-imagebox -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content-inner">
+                                        <div class="row multi-columns-row ttm-boxes-spacing-5px">
+                                            <div class="ttm-box-col-wrapper col-lg-4 col-md-6 col-sm-12">
+                                                <!-- featured-imagebox -->
+                                                <div class="featured-imagebox featured-imagebox-portfolio">
+                                                    <!-- featured-thumbnail -->
+                                                    <div class="featured-thumbnail">
+                                                        <a href="#"> <img class="img-fluid"
+                                                                src="{% static 'web/images/portfolio/05.jpg' %}" alt="image"></a>
+                                                    </div><!-- featured-thumbnail end-->
+                                                    <!-- ttm-box-view-overlay -->
+                                                    <div class="ttm-box-view-overlay ttm-portfolio-box-view-overlay">
+                                                        <div class="ttm-box-view-content-inner">
+                                                            <div class="featured-content featured-content-portfolio">
+                                                                <span class="category">
+                                                                    <a href="#">Electrical</a>,
+                                                                    <a href="#">Painting</a>
+                                                                </span>
+                                                                <h2 class="featured-title"><a
+                                                                        href="#">Electrical wiring,
+                                                                        San Jose</a></h2>
+                                                            </div>
+                                                        </div>
+                                                    </div><!-- ttm-box-view-overlay end-->
+                                                </div><!-- featured-imagebox -->
+                                            </div>
+                                            <div class="ttm-box-col-wrapper col-lg-4 col-md-6 col-sm-12">
+                                                <!-- featured-imagebox -->
+                                                <div class="featured-imagebox featured-imagebox-portfolio">
+                                                    <!-- featured-thumbnail -->
+                                                    <div class="featured-thumbnail">
+                                                        <a href="#"> <img class="img-fluid"
+                                                                src="{% static 'web/images/portfolio/06.jpg' %}" alt="image"></a>
+                                                    </div><!-- featured-thumbnail end -->
+                                                    <!-- ttm-box-view-overlay -->
+                                                    <div class="ttm-box-view-overlay ttm-portfolio-box-view-overlay">
+                                                        <div class="ttm-box-view-content-inner">
+                                                            <div class="featured-content featured-content-portfolio">
+                                                                <span class="category">
+                                                                    <a href="#">Electrical</a>,
+                                                                    <a href="#">Home
+                                                                        Maintenance</a>
+                                                                </span>
+                                                                <h2 class="featured-title"><a
+                                                                        href="#">Fireplace
+                                                                        cleaning, Portland</a></h2>
+                                                            </div>
+                                                        </div>
+                                                    </div><!-- ttm-box-view-overlay end-->
+                                                </div><!-- featured-imagebox -->
+                                            </div>
+                                            <div class="ttm-box-col-wrapper col-lg-4 col-md-6 col-sm-12">
+                                                <!-- featured-imagebox -->
+                                                <div class="featured-imagebox featured-imagebox-portfolio">
+                                                    <!-- featured-thumbnail -->
+                                                    <div class="featured-thumbnail">
+                                                        <a href="#"> <img class="img-fluid"
+                                                                src="{% static 'web/images/portfolio/07.jpg' %}" alt="image"></a>
+                                                    </div><!-- featured-thumbnail end -->
+                                                    <!-- ttm-box-view-overlay -->
+                                                    <div class="ttm-box-view-overlay ttm-portfolio-box-view-overlay">
+                                                        <div class="ttm-box-view-content-inner">
+                                                            <div class="featured-content featured-content-portfolio">
+                                                                <span class="category">
+                                                                    <a href="#">Electrical</a>,
+                                                                    <a href="#">Roofing</a>
+                                                                </span>
+                                                                <h2 class="featured-title"><a
+                                                                        href="#">Roofing,
+                                                                        Berlin</a></h2>
+                                                            </div>
+                                                        </div>
+                                                    </div><!-- ttm-box-view-overlay end-->
+                                                </div><!-- featured-imagebox -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content-inner">
+                                        <div class="row multi-columns-row ttm-boxes-spacing-5px">
+                                            <div class="ttm-box-col-wrapper col-lg-4 col-md-6 col-sm-12">
+                                                <!-- featured-imagebox -->
+                                                <div class="featured-imagebox featured-imagebox-portfolio">
+                                                    <!-- featured-thumbnail -->
+                                                    <div class="featured-thumbnail">
+                                                        <a href="#"> <img class="img-fluid"
+                                                                src="{% static 'web/images/portfolio/07.jpg' %}" alt="image"></a>
+                                                    </div><!-- featured-thumbnail end -->
+                                                    <!-- ttm-box-view-overlay -->
+                                                    <div class="ttm-box-view-overlay ttm-portfolio-box-view-overlay">
+                                                        <div class="ttm-box-view-content-inner">
+                                                            <div class="featured-content featured-content-portfolio">
+                                                                <span class="category">
+                                                                    <a href="#">Electrical</a>,
+                                                                    <a href="#">Roofing</a>
+                                                                </span>
+                                                                <h2 class="featured-title"><a
+                                                                        href="#">Roofing,
+                                                                        Berlin</a></h2>
+                                                            </div>
+                                                        </div>
+                                                    </div><!-- ttm-box-view-overlay end-->
+                                                </div><!-- featured-imagebox -->
+                                            </div>
+                                            <div class="ttm-box-col-wrapper col-lg-4 col-md-6 col-sm-12">
+                                                <!-- featured-imagebox -->
+                                                <div class="featured-imagebox featured-imagebox-portfolio">
+                                                    <!-- featured-thumbnail -->
+                                                    <div class="featured-thumbnail">
+                                                        <a href="#"> <img class="img-fluid"
+                                                                src="{% static 'web/images/portfolio/09.jpg' %}" alt="image"></a>
+                                                    </div><!-- featured-thumbnail end -->
+                                                    <!-- ttm-box-view-overlay -->
+                                                    <div class="ttm-box-view-overlay ttm-portfolio-box-view-overlay">
+                                                        <div class="ttm-box-view-content-inner">
+                                                            <div class="featured-content featured-content-portfolio">
+                                                                <span class="category">
+                                                                    <a href="#">Heating</a>,
+                                                                    <a href="#">Roofing</a>
+                                                                </span>
+                                                                <h2 class="featured-title"><a
+                                                                        href="#">Sealing driveways,
+                                                                        New York</a></h2>
+                                                            </div>
+                                                        </div>
+                                                    </div><!-- ttm-box-view-overlay end-->
+                                                </div><!-- featured-imagebox -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content-inner">
+                                        <div class="row multi-columns-row ttm-boxes-spacing-5px">
+                                            <div class="ttm-box-col-wrapper col-lg-4 col-md-6 col-sm-12">
+                                                <!-- featured-imagebox -->
+                                                <div class="featured-imagebox featured-imagebox-portfolio">
+                                                    <!-- featured-thumbnail -->
+                                                    <div class="featured-thumbnail">
+                                                        <a href="#"> <img class="img-fluid"
+                                                                src="{% static 'web/images/portfolio/08.jpg' %}" alt="image"></a>
+                                                    </div><!-- featured-thumbnail end -->
+                                                    <!-- ttm-box-view-overlay -->
+                                                    <div class="ttm-box-view-overlay ttm-portfolio-box-view-overlay">
+                                                        <div class="ttm-box-view-content-inner">
+                                                            <div class="featured-content featured-content-portfolio">
+                                                                <span class="category">
+                                                                    <a href="#">Heating</a>,
+                                                                    <a href="#">Plumbing</a>
+                                                                </span>
+                                                                <h2 class="featured-title"><a
+                                                                        href="#">Heating system
+                                                                        tune-up, Manham</a></h2>
+                                                            </div>
+                                                        </div>
+                                                    </div><!-- ttm-box-view-overlay end-->
+                                                </div><!-- featured-imagebox -->
+                                            </div>
+                                            <div class="ttm-box-col-wrapper col-lg-4 col-md-6 col-sm-12">
+                                                <!-- featured-imagebox -->
+                                                <div class="featured-imagebox featured-imagebox-portfolio">
+                                                    <!-- featured-thumbnail -->
+                                                    <div class="featured-thumbnail">
+                                                        <a href="#"> <img class="img-fluid"
+                                                                src="{% static 'web/images/portfolio/09.jpg' %}" alt="image"></a>
+                                                    </div><!-- featured-thumbnail end -->
+                                                    <!-- ttm-box-view-overlay -->
+                                                    <div class="ttm-box-view-overlay ttm-portfolio-box-view-overlay">
+                                                        <div class="ttm-box-view-content-inner">
+                                                            <div class="featured-content featured-content-portfolio">
+                                                                <span class="category">
+                                                                    <a href="#">Heating</a>,
+                                                                    <a href="#">Roofing</a>
+                                                                </span>
+                                                                <h2 class="featured-title"><a
+                                                                        href="#">Sealing driveways,
+                                                                        New York</a></h2>
+                                                            </div>
+                                                        </div>
+                                                    </div><!-- ttm-box-view-overlay end-->
+                                                </div><!-- featured-imagebox -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% endcomment %}
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- row end -->
+                </div>
+            </section>
+
+
+        </div>
+        <!--site-main end-->
+
+{% endblock %}

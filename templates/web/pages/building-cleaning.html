@@ -1,0 +1,97 @@
+{% extends 'web/base-two.html' %}
+{% load static %}
+{% block content %}
+
+<!--page start-->
+<div class="page sidebar-true">
+
+
+
+
+    <!-- page-title -->
+    <div class="ttm-page-title-row">
+        <div class="ttm-page-title-row-bg-layer ttm-bg-layer"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="title-box ttm-textcolor-white">
+                        <div class="page-title-heading">
+                            <h1 class="title">BUILDING CLEANING</h1>
+                        </div><!-- /.page-title-captions -->
+                        <div class="breadcrumb-wrapper">
+                            <span>
+                                <a title="Homepage" href="/"><i class="ti ti-home"></i></a>
+                            </span>
+                            <!-- <span class="ttm-bread-sep">&nbsp; / &nbsp;</span>
+                            <span><span>BUILDING CLEANING</span></span> -->
+                        </div>
+                    </div>
+                </div><!-- /.col-md-12 -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </div><!-- page-title end-->
+
+    <!--site-main start-->
+    <div class="site-main">
+
+        <!-- sidebar -->
+        <div class="sidebar ttm-sidebar-left ttm-bgcolor-white break-991-colum clearfix">
+            <div class="container">
+                <!-- row -->
+                <div class="row">
+                    {% include 'web/partials/sidenavbar.html' %}
+                    <div class="col-lg-9 content-area">
+                        <!-- ttm-service-single-content-are -->
+                        <div class="ttm-service-single-content-area">
+                            <h3>BUILDING CLEANING</h3>
+                            <div class="ttm_single_image-wrapper mb-35">
+                                <img class="img-fluid" src="{% static 'web/images/service-single/cleaning.jpg' %}"
+                                    alt="">
+                            </div>
+                            <div class="ttm-service-description">
+                                <div class="mb-35">
+                                    <p class="text-justify">Building cleaning is one of the most needed services in
+                                        every sector. The job is
+                                        to be carried out with care and perfection for maintaining cleanliness. We
+                                        deliver the complete solution for building cleaning services at the best quality
+                                        with the assistance of skilled labourers of SHTS. We thrive to keep your
+                                        surroundings safe and healthy.</p>
+
+                                    <p>
+                                        Building cleaning is a type of cleaning service provided particularly for the
+                                        proceeding days after a construction or renovation project. A building cleaning
+                                        service takes care of the entire house on a one-time basis instead of on a
+                                        periodic basis.
+
+                                        <ul>
+                                            <li>Boosted employee productivity.</li>
+                                            <li>Less spread of disease. </li>
+                                            <li>Safer and healthier work environment.</li>
+                                            <li>A positive & professional appearance.</li>
+                                            <li>Long term cost savings.</li>
+                                            <li>Safe and fresh interiors and exteriors.</li>
+                                        </ul>
+                                    </p>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <!-- ttm-service-single-content-are end -->
+                    </div>
+
+                </div><!-- row end -->
+            </div>
+        </div>
+        <!-- sidebar end -->
+
+
+    </div>
+    <!--site-main end-->
+
+
+
+</div><!-- page end -->
+
+
+{% endblock %}
