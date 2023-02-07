@@ -1,0 +1,96 @@
+
+<title>{{seo_blog.title}}</title>
+<meta name="keywords" content="{{seo_blog.meta_keywords}}">
+<meta name="title" content="{{seo_blog.meta_title}}">
+<meta name="description" content="{{seo_blog.meta_description}}">
+
+{% extends 'web/base-two.html' %} {% load static %} {% block content %}
+
+<!-- page-title -->
+<div class="ttm-page-title-row">
+  <div class="ttm-page-title-row-bg-layer ttm-bg-layer"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="title-box ttm-textcolor-white">
+          <div class="page-title-heading">
+            <h1 class="title">Updates</h1>
+          </div>
+          <!-- /.page-title-captions -->
+          <div class="breadcrumb-wrapper">
+            <span>
+              <a title="Homepage" href="/"
+                ><i class="ti ti-home"></i
+              ></a>
+            </span>
+            <span class="ttm-bread-sep">&nbsp; / &nbsp;</span>
+            <span><span>Updates</span></span>
+          </div>
+        </div>
+      </div>
+      <!-- /.col-md-12 -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</div>
+<!-- page-title end-->
+
+<!--site-main start-->
+<div class="site-main">
+  <!-- service-section -->
+  <section class="ttm-row services2-section pb-110 clearfix">
+    <div class="container">
+      <!-- row -->
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+          <!-- section title -->
+          <div class="section-title with-desc title-style-center_text clearfix">
+            <div class="title-header">
+              <h5>UPDATES</h5>
+            </div>
+          </div>
+          <!-- section title end -->
+        </div>
+        <div class="col-md-2"></div>
+      </div>
+      <div class="row mt-10">
+        {% for update in updates %}
+        <div class="col-md-4">
+          <!-- featured-imagebox -->
+          <div class="featured-imagebox box-shadow2 mb-30">
+            <div class="featured-thumbnail">
+              <img
+                class="img-fluid"
+                src="{{update.image.crop.720x544}}"
+                alt=""
+              />
+            </div>
+            <div class="ttm-box-bottom-content">
+              <div class="featured-title featured-title">
+                <span>{{update.date|date:"d/M/Y"}}</span>
+                <h5>
+                  <a href="{% url 'web:blog_details' update.slug %}">{{update.title}}
+                  </a>
+                </h5>
+              </div>
+              <div class="featured-desc">
+                <p>
+                  {{update.summary}}
+                </p>
+                <!-- <a class="ttm-btn ttm-btn-size-md ttm-btn-shape-square ttm-icon-btn-right ttm-btn-style-border ttm-btn-color-black mt-10"
+                                            href="#">MORE DETAILS<i
+                                                class="ti ti-angle-double-right"></i></a> -->
+              </div>
+            </div>
+          </div>
+          <!-- featured-imagebox end-->
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+</div>
+
+{% endblock %}

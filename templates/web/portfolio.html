@@ -1,3 +1,9 @@
+
+<title>{{seo_portfolio.title}}</title>
+<meta name="keywords" content="{{seo_portfolio.meta_keywords}}">
+<meta name="title" content="{{seo_portfolio.meta_title}}">
+<meta name="description" content="{{seo_portfolio.meta_description}}">
+
 {% extends 'web/base-two.html' %}
 {% load static %}
 {% block content %}
@@ -11,14 +17,14 @@
                     <div class="col-md-12">
                         <div class="title-box ttm-textcolor-white">
                             <div class="page-title-heading">
-                                <h1 class="title">Gallery</h1>
+                                <h1 class="title">Portfolio</h1>
                             </div><!-- /.page-title-captions -->
                             <div class="breadcrumb-wrapper">
                                 <span>
                                     <a title="Homepage" href="/"><i class="ti ti-home"></i></a>
                                 </span>
                                 <span class="ttm-bread-sep">&nbsp; / &nbsp;</span>
-                                <span><span>Gallery</span></span>
+                                <span><span>Portfolio</span></span>
                             </div>
                         </div>
                     </div><!-- /.col-md-12 -->
@@ -64,7 +70,7 @@
 
                                     <div class="content-inner active">
                                         <div class="row multi-columns-row ttm-boxes-spacing-10px">
-                                            {% for gallery in galleries %}
+                                            {% for gallery in portfolio %}
                                             <div class="ttm-box-col-wrapper col-lg-4 col-md-6 col-sm-12">
                                                 <!-- featured-imagebox -->
                                                 <div class="featured-imagebox featured-imagebox-portfolio">

@@ -17,14 +17,19 @@
                     </ul>
                     <div class="ttm-social-links-wrapper list-inline">
                         <ul class="social-icons">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            {% for obj in social_media %}
+                            <li><a href="{{obj.link}}"><img src="{{obj.image.url}}" style="width:100%;background-color: white;border: 1px solid;border-radius: 10px;"></a>
                             </li>
+                            {% endfor %}
+
+                            {% comment %}
                             <li><a href="#"><i class="fa fa-twitter"></i></a>
                             </li>
                             <li><a href="#"><i class="fa fa-flickr"></i></a>
                             </li>
                             <li><a href="#"><i class="fa fa-linkedin"></i></a>
                             </li>
+                            {% endcomment %}
                         </ul>
                     </div>
                 </div>
@@ -102,7 +107,10 @@
                                     <li class="{% if is_services %}active {% endif %}"><a href="{% url 'web:services' %}">Services</a>
 
                                     </li>
-                                    <li class="{% if is_gallery %}active {% endif %}"><a href="{% url 'web:gallery' %}">Portfolio</a>
+                                    <li class="{% if is_gallery %}active {% endif %}"><a href="{% url 'web:portfolio' %}">Portfolio</a>
+
+                                    </li>
+                                    <li class="{% if is_blog %}active {% endif %}"><a href="{% url 'web:blog' %}">Updates</a>
 
                                     </li>
                                     <li class="{% if is_contact %} active {% endif %}" ><a href="{% url 'web:contact' %}">Contact</a>

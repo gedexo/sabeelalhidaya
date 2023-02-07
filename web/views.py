@@ -5,44 +5,67 @@ from django.http import HttpResponse
 from django.urls import reverse
 from django.contrib.auth.decorators import login_required
 import json
-from .models import Gallery
+from .models import Portfolio
+from .models import Update
+from .models import FAQ
+from .models import Banner
+from .models import SocialMedia
+from .models import SeoHome
+from .models import SeoAbout
+from .models import SeoServices
+from .models import SeoPortfolio
+from .models import SeoBlog
+from .models import SeoContact
 from .forms import ContactForm
 
 def index(request):
-    galleries = Gallery.objects.filter().order_by("-id")[:6]
+    portfolio = Portfolio.objects.filter().order_by("-id")[:6]
+    faq = FAQ.objects.all()
+    banner = Banner.objects.all().order_by("-id")
+    seo_home = SeoHome.objects.all()
     context = {
         "is_index" : True,
-        "galleries" : galleries,
-       
+        "portfolio" : portfolio,
+        'faq':faq,
+        'banner':banner,
+        "seo_home":seo_home,
     }
     return render(request, 'web/index.html',context)
 
   
 def about(request):
+    seo_about = SeoAbout.objects.all()
     context = {
-        "is_about" : True
+        "is_about" : True,
+        "seo_about":seo_about,
     }
     return render(request, 'web/about.html',context)
 
 
 def services(request):
+    seo_services = SeoServices.objects.all()
     context = {
         "is_services" : True,
+        "seo_services":seo_services,
     }
     return render(request, 'web/services.html',context)
 
 
-def gallery(request):
-    galleries = Gallery.objects.all()
+def portfolio(request):
+    portfolio = Portfolio.objects.all()
+    seo_portfolio = SeoPortfolio.objects.all()
     context = {
         "is_gallery" : True,
-        "galleries" : galleries,
+        "portfolio" : portfolio,
+        "seo_portfolio":seo_portfolio,
         
     }
     return render(request, 'web/portfolio.html',context)
 
 
 def contact(request):
+    seo_contact = SeoContact.objects.all()
+    social_media = SocialMedia.objects.all()
     forms = ContactForm(request.POST or None)
     if request.method == 'POST':
         if forms.is_valid():
@@ -65,6 +88,8 @@ def contact(request):
         context = {
             "is_contact": True,
             "forms": forms,
+            "social_media":social_media,
+            "seo_contact":seo_contact,
         }
         return render(request, 'web/contact.html', context)
     
@@ -156,3 +181,19 @@ def handler404(request,exception):
 
 def handler500(request):
     return render(request, 'error/500.html', status=500)
+
+
+def blog(request):
+    updates=Update.objects.all()
+    seo_blog = SeoBlog.objects.all()
+    context = {"is_blog":True,"updates":updates,"seo_blog":seo_blog}
+    return render(request,"web/blog.html",context)
+
+
+def blog_details(request,slug):
+    update = get_object_or_404(Update,slug=slug)
+    updates=Update.objects.exclude(pk=update.pk)[:3]
+    context = {"update":update,"updates":updates}
+    return render(request,"web/blog-details.html",context)
+
+

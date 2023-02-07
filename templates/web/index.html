@@ -1,6 +1,18 @@
+
+<title>{{seo_home.title}}</title>
+<meta name="keywords" content="{{seo_home.meta_keywords}}">
+<meta name="title" content="{{seo_home.meta_title}}">
+<meta name="description" content="{{seo_home.meta_description}}">
+
+
 {% extends 'web/base.html' %}
 {% load static %}
 {% block content %}
+
+
+<link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+
 
 <div id="rev_slider_4_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container slide-overlay"
     data-alias="classic4export" data-source="gallery">
@@ -8,13 +20,13 @@
 
     <div id="rev_slider_4_1" class="rev_slider fullwidthabanner" data-version="5.4.8.1">
         <ul>
-
+             {% for obj in banner %}
             <li data-index="rs-3" data-transition="slotslide-horizontal" data-slotamount="default"
                 data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default"
                 data-masterspeed="default" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1=""
                 data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8=""
                 data-param9="" data-param10="" data-description="">
-                <img src="{% static 'web/images/slides/painting.jpg' %}" alt="" title="slider-mainbg-003" width="1920"
+                <img src="{{obj.image.crop.1423x720}}" alt="" title="slider-mainbg-003" width="1920"
                     height="725" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat"
                     class="rev-slidebg" data-no-retina>
 
@@ -29,7 +41,7 @@
                     data-frames='[{"delay":190,"speed":400,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power0.easeIn"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
                     data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[16,16,10,10]"
                     data-paddingright="[25,25,25,10]" data-paddingbottom="[16,16,10,10]"
-                    data-paddingleft="[25,25,25,10]">Work Experts
+                    data-paddingleft="[25,25,25,10]">{{obj.category}}
                 </div>
 
                 <div class="tp-caption tp-resizeme slide-main-text" id="slide-3-layer-2"
@@ -43,7 +55,7 @@
                     data-frames='[{"delay":430,"speed":800,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power0.easeIn"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
                     data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]"
                     data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]">
-                    PAINTING &
+                    {{obj.title_first_word}}
                 </div>
 
                 <div class="tp-caption tp-resizeme slide-main-text" id="slide-3-layer-3"
@@ -57,7 +69,7 @@
                     data-frames='[{"delay":760,"speed":800,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power0.easeIn"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
                     data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]"
                     data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]">
-                    WALLPAPER FIXING
+                    {{obj.title_second_word}}
                 </div>
 
 
@@ -72,7 +84,7 @@
                     data-frames='[{"delay":1210,"speed":500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power0.easeIn"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
                     data-textAlign="['inherit','inherit','center','inherit']" data-paddingtop="[0,0,0,0]"
                     data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]">
-                    Best services delivered in painting tiling, wallpaper fixing, and carpentry.
+                    {{obj.sub_title}}
 
                 </div>
 
@@ -153,6 +165,9 @@
                 </a> -->
 
             </li>
+            {% endfor %}
+
+            {% comment %}
 
             <li data-index="rs-2" data-transition="slotslide-horizontal" data-slotamount="default"
                 data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default"
@@ -732,6 +747,7 @@
             </a> -->
 
             </li>
+            {% endcomment %}
 
 
 
@@ -1001,6 +1017,79 @@
     </section>
     <!-- partners-section end -->
 
+
+    <!-- FAQ -->
+    <div class="accordion">
+        <h4 class="accordion__heading">Frequently Asked Questions</h4>
+      
+        {% for obj in faq %}
+        <div class="accordion__item">
+          <button class="accordion__btn">
+      
+            <span class="accordion__caption"><i class="far fa-lightbulb"></i>{{obj.question}}</span>
+            <span class="accordion__icon"><i class="fa fa-plus"></i></span>
+          </button>
+      
+          <div class="accordion__content">
+            <p>{{obj.answer}}</p>
+          </div>
+        </div>
+        {% endfor %}
+        
+        {% comment %}
+        <div class="accordion__item">
+          <button class="accordion__btn">
+      
+            <span class="accordion__caption"><i class="far fa-lightbulb"></i>Which programming language is the best to learn?</span>
+            <span class="accordion__icon"><i class="fa fa-plus"></i></span>
+          </button>
+      
+          <div class="accordion__content">
+            <p>I usually tell most people to start by learning HTML and CSS, then move into learning JavaScript. The reason is that JavaScript is used everywhere: frontend, backend, and even to build mobile apps. It has many use cases, which is why I think it’s smart to learn.</p>
+          </div>
+        </div>
+      
+        <div class="accordion__item">
+          <button class="accordion__btn">
+      
+            <span class="accordion__caption"><i class="far fa-lightbulb"></i>Is it possible to do both graphic design and coding?</span>
+            <span class="accordion__icon"><i class="fa fa-plus"></i></span>
+          </button>
+      
+          <div class="accordion__content">
+            <p>If you have an interest in coding and graphic design, then there’s nothing to say you shouldn’t learn skills in both areas. They often work hand-in-hand, so having knowledge and skills in both areas could be desirable for certain career paths. You could also think about pursuing something in between like UI design, which is a very in-demand career right now!
+              <br><br>
+              In general, having design skills along with coding skills is helpful. But it’s also okay to do one over the other. My advice would be to just get started! You can always change directions later… as long as you’re changing directions to the final destination you’re looking for!
+            </p>
+          </div>
+        </div>
+      
+        <div class="accordion__item">
+          <button class="accordion__btn">
+      
+            <span class="accordion__caption"><i class="far fa-lightbulb"></i>Should I learn Python 2 or Python 3?</span>
+            <span class="accordion__icon"><i class="fa fa-plus"></i></span>
+          </button>
+      
+          <div class="accordion__content">
+            <p>Now, in 2020, it’s a no-brainer: Python 3 is definitely the way to go. There are still some situations where picking up Python 2 might be advantageous, or you may just want to learn a little of the history and the differences between Python 2 and 3 for curiosity’s sake, but job-wise, Python 3 is the clear winner.</p>
+          </div>
+        </div>
+      
+        <div class="accordion__item">
+          <button class="accordion__btn">
+      
+            <span class="accordion__caption"><i class="far fa-lightbulb"></i>Should I learn skills in several areas?</span>
+            <span class="accordion__icon"><i class="fa fa-plus"></i></span>
+          </button>
+      
+          <div class="accordion__content">
+            <p>Personally, I’d say choose a path and stick to it! Learning too many things at once will slow you down. Here are a few ideas of things you can choose to focus on, and a little bit about each one.</p>
+          </div>
+        </div>
+        {% endcomment %}
+      </div>
+    <!-- End of FAQ -->
 
     <!--about-section-->
     <section class="ttm-row about-section bg-img1 break-991-colum clearfix">
@@ -1324,7 +1413,7 @@
 
                             <div class="content-inner active">
                                 <div class="row multi-columns-row ttm-boxes-spacing-10px">
-                                    {% for gallery in galleries %}
+                                    {% for gallery in portfolio %}
                                     <div class="ttm-box-col-wrapper col-lg-4 col-md-6 col-sm-12">
                                         <!-- featured-imagebox -->
                                         <div class="featured-imagebox featured-imagebox-portfolio">
@@ -1713,5 +1802,24 @@
 <!--site-main end-->
 
 
+
+<script>
+const accItems = document.querySelectorAll(".accordion__item");
+
+// add a click event for all items
+accItems.forEach((acc) => acc.addEventListener("click", toggleAcc));
+
+function toggleAcc() {
+  // remove active class from all items exept the current item (this)
+  accItems.forEach((item) => item != this ? item.classList.remove("accordion__item--active") : null
+  );
+
+  // toggle active class on current item
+  if (this.classList != "accordion__item--active") {
+    this.classList.toggle("accordion__item--active");
+  }
+}
+
+</script>
 
 {% endblock %}
