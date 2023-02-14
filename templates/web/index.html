@@ -1,3 +1,4 @@
+{% extends 'web/base.html' %}
 
 <title>{{seo_home.title}}</title>
 <meta name="keywords" content="{{seo_home.meta_keywords}}">
@@ -5,9 +6,9 @@
 <meta name="description" content="{{seo_home.meta_description}}">
 
 
-{% extends 'web/base.html' %}
 {% load static %}
 {% block content %}
+
 
 
 <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
@@ -1172,10 +1173,80 @@
         </div>
     </section>
     <!--about-section end-->
+ 
+
+
+<!-- ============================================ -->
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <img class="img-fluid-home" src="{% static 'web/images/sats/Building Cleaning Services.jpg' %}" >
+            </div>
+            <div class="col-lg-6">
+                <h4>Trusted Professionals for your Cleaning Services</h4>
+                <p>You may count on Sabeel Al Hidaya Technical Services for all of your demands for excellent cleaners in UAE. You can choose from among hundreds of seasoned cleaning specialists with a single click. Being one of the top cleaning company Business Bay, Silicon Oasis, JLT, Science Park, from building cleaning to masonry we have got your back. </p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ============================================ -->
+
+
+<!-- ========================================================== -->
+ <main>
+        <!-- Ui cards -->
+        <section id="cards">
+            <div class="container py-2">
+                <div class="row pb-4">
+                    <div class="col-12 text-center">
+                        <h4>Our Services</h4>
+                        <p>From start to finish all our services are carried out in a professional manner sure to far exceed your expectations. </p>
+                    </div>
+                </div>
+                <!-- cards -->
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 mb-4 pt-5">
+                        <div class="card shadow-sm border-0">
+                            <div class="text-center">
+                                <img src="{% static 'web/images/icons/AC Repairs-01.png' %}" style="width: 15%;">
+                            </div>
+                            
+                            <div class="card-body">
+                                <div class="user-content">
+                                    <p class="text-muted mb-0 text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet nemo harum repellendus aut itaque. Temporibus quaerat dolores ut, cupiditate molestiae commodi! Distinctio praesentium, debitis aut minima doloribus earum
+                                        quia commodi.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4 pt-5">
+                        <div class="card shadow-sm border-0">
+                            <div class="text-center">
+                                <img src="{% static 'web/images/icons/AC Repairs-01.png' %}" style="width: 15%;">
+                            </div>
+                            
+                            <div class="card-body">
+                                <div class="user-content">
+                                    <p class="text-muted mb-0 text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet nemo harum repellendus aut itaque. Temporibus quaerat dolores ut, cupiditate molestiae commodi! Distinctio praesentium, debitis aut minima doloribus earum
+                                        quia commodi.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /cards -->
+        </section>
+        <!-- /Ui cards -->
+    </main>
+<!-- ========================================================== -->
+
 
 
     <!--broken-section-->
-    <section class="ttm-row broken-section bg-layer break-1199-colum res-991-mt-0 mt_70 clearfix">
+    <section class="ttm-row broken-section bg-layer break-1199-colum res-991-mt-0 clearfix mt-25">
         <div class="container">
             <!-- row -->
             <div class="row">
