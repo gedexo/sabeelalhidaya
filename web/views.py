@@ -197,3 +197,43 @@ def blog_details(request,slug):
     return render(request,"web/blog-details.html",context)
 
 
+def residential_cleaning(request):
+    context = {
+        "is_residential_cleaning":True
+    }
+    return render(request,'web/pages/residential-cleaning.html',context)
+
+
+def sofa_cleaning(request):
+    context = {
+        "is_sofa_cleaning":True
+    }
+    return render(request,'web/pages/sofa-cleaning.html',context)
+
+
+def construction_cleaning(request):
+    context = {
+        "is_construction_cleaning":True
+    }
+    return render(request,'web/pages/construction-cleaning.html',context)
+
+
+def carpet_cleaning(request):
+    context = {
+        "is_carpet_cleaning":True
+    }
+    return render(request,'web/pages/carpet-cleaning.html',context)
+
+
+def mattress_cleaning(request):
+    context = {
+        "is_mattress_cleaning":True
+    }
+    return render(request,'web/pages/mattress-cleaning.html',context)
+
+
+def office_cleaning(request):
+    context = {
+        "is_office_cleaning":True
+    }
+    return render(request,'web/pages/office-cleaning.html',context)

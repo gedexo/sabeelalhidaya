@@ -15,6 +15,12 @@ class="col-lg-3 widget-area sidebar-left ttm-col-bgcolor-yes ttm-bg ttm-left-spa
         <li class="{% if is_wallpaper_fixing %}active {% endif %}" ><a href="{% url 'web:wallpaper_fixing' %}"> WALLPAPER FIXING </a></li>
         <li class="{% if is_general_maintanance %}active {% endif %}"><a href="{% url 'web:general_maintanance' %}"> GENERAL MAINTENANCE </a></li>
         <li class="{% if is_building_cleaning_service %}active {% endif %}"><a href="{% url 'web:building_cleaning_service' %}"> BUILDING CLEANING </a></li>
+        <li class="{% if is_residential_cleaning %}active {% endif %}"><a href="{% url 'web:residential_cleaning' %}"> RESIDENTIAL CLEANING </a></li>
+        <li class="{% if is_sofa_cleaning %}active {% endif %}"><a href="{% url 'web:sofa_cleaning' %}"> SOFA CLEANING </a></li>
+        <li class="{% if is_construction_cleaning %}active {% endif %}"><a href="{% url 'web:construction_cleaning' %}"> CONSTRUCTION CLEANING </a></li>
+        <li class="{% if is_carpet_cleaning %}active {% endif %}"><a href="{% url 'web:carpet_cleaning' %}"> CARPET CLEANING </a></li>
+        <li class="{% if is_mattress_cleaning %}active {% endif %}"><a href="{% url 'web:mattress_cleaning' %}"> MATTRESS CLEANING </a></li>
+        <li class="{% if is_office_cleaning %}active {% endif %}"><a href="{% url 'web:office_cleaning' %}"> OFFICE CLEANING </a></li>
     </ul>
 </aside>
 {% comment %}

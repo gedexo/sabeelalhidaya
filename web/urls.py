@@ -25,6 +25,12 @@ urlpatterns = [
 
     path('wallpaper-fixing/', views.wallpaper_fixing,name="wallpaper_fixing"),
     path('masonry/', views.masonry_service,name="masonry_service"),
+    path('residential-cleaning/', views.residential_cleaning,name="residential_cleaning"),
+    path('sofa-cleaning/', views.sofa_cleaning,name="sofa_cleaning"),
+    path('construction-cleaning/', views.construction_cleaning,name="construction_cleaning"),
+    path('carpet-cleaning/', views.carpet_cleaning,name="carpet_cleaning"),
+    path('mattress-cleaning/', views.mattress_cleaning,name="mattress_cleaning"),
+    path('office-cleaning/', views.office_cleaning,name="office_cleaning"),
 
 ]
 
