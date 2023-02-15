@@ -3216,3 +3216,8 @@ section.error-404 .page-content p {
     width: 100%;    
     height: 215px;
 }
+
+/* ==================== */
+.service-box{
+    height: 600px;
+}
