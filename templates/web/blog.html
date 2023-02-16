@@ -1,12 +1,14 @@
-
 {% extends 'web/base-two.html' %}
+ {% load static %}
 
-<title>{{seo_blog.title}}</title>
+ {% block meta %}
+ <title>{{seo_blog.title}}</title>
 <meta name="keywords" content="{{seo_blog.meta_keywords}}">
 <meta name="title" content="{{seo_blog.meta_title}}">
 <meta name="description" content="{{seo_blog.meta_description}}">
+{% endblock %}
 
- {% load static %} {% block content %}
+  {% block content %}
 
 <!-- page-title -->
 <div class="ttm-page-title-row">

@@ -22,7 +22,7 @@ def index(request):
     portfolio = Portfolio.objects.filter().order_by("-id")[:6]
     faq = FAQ.objects.all()
     banner = Banner.objects.all().order_by("-id")
-    seo_home = SeoHome.objects.all()
+    seo_home = SeoHome.objects.all().last()
     context = {
         "is_index" : True,
         "portfolio" : portfolio,
@@ -34,7 +34,7 @@ def index(request):
 
   
 def about(request):
-    seo_about = SeoAbout.objects.all()
+    seo_about = SeoAbout.objects.all().last()
     context = {
         "is_about" : True,
         "seo_about":seo_about,
@@ -43,7 +43,7 @@ def about(request):
 
 
 def services(request):
-    seo_services = SeoServices.objects.all()
+    seo_services = SeoServices.objects.all().last()
     context = {
         "is_services" : True,
         "seo_services":seo_services,
@@ -53,7 +53,7 @@ def services(request):
 
 def portfolio(request):
     portfolio = Portfolio.objects.all()
-    seo_portfolio = SeoPortfolio.objects.all()
+    seo_portfolio = SeoPortfolio.objects.all().last()
     context = {
         "is_gallery" : True,
         "portfolio" : portfolio,
@@ -64,7 +64,7 @@ def portfolio(request):
 
 
 def contact(request):
-    seo_contact = SeoContact.objects.all()
+    seo_contact = SeoContact.objects.all().last()
     social_media = SocialMedia.objects.all()
     forms = ContactForm(request.POST or None)
     if request.method == 'POST':
@@ -185,7 +185,7 @@ def handler500(request):
 
 def blog(request):
     updates=Update.objects.all()
-    seo_blog = SeoBlog.objects.all()
+    seo_blog = SeoBlog.objects.all().last()
     context = {"is_blog":True,"updates":updates,"seo_blog":seo_blog}
     return render(request,"web/blog.html",context)
 
