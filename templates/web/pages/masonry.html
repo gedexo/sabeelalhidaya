@@ -1,5 +1,14 @@
 {% extends 'web/base-two.html' %}
 {% load static %}
+
+{% block meta %}
+<title>{{seo_mansory.title}}</title>
+<meta name="keywords" content="{{seo_mansory.meta_keywords}}">
+<meta name="title" content="{{seo_mansory.meta_title}}">
+<meta name="description" content="{{seo_mansory.meta_description}}">
+{% endblock %}
+
+
 {% block content %}
 
 <!--page start-->

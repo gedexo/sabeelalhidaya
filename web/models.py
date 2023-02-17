@@ -158,3 +158,211 @@ class SeoContact(models.Model):
 
     class Meta:
         verbose_name_plural = ("SEO Contact")
+
+
+class SeoACServiceAndRepairs(models.Model):
+    title = models.CharField(max_length=200)
+    meta_keywords = models.CharField(max_length=500)
+    meta_title = models.CharField(max_length=500)
+    meta_description = models.CharField(max_length=500)
+
+    def __str__(self):
+        return str(self.title)
+
+    class Meta:
+        verbose_name_plural = ("SEO AC Service and Repairs")
+
+
+class SeoElectricals(models.Model):
+    title = models.CharField(max_length=200)
+    meta_keywords = models.CharField(max_length=500)
+    meta_title = models.CharField(max_length=500)
+    meta_description = models.CharField(max_length=500)
+
+    def __str__(self):
+        return str(self.title)
+
+    class Meta:
+        verbose_name_plural = ("SEO Electricals")   
+
+
+class SeoPlumbing(models.Model):
+    title = models.CharField(max_length=200)
+    meta_keywords = models.CharField(max_length=500)
+    meta_title = models.CharField(max_length=500)
+    meta_description = models.CharField(max_length=500)
+
+    def __str__(self):
+        return str(self.title)
+
+    class Meta:
+        verbose_name_plural = ("SEO Plumbing")
+
+
+class SeoTiling(models.Model):
+    title = models.CharField(max_length=200)
+    meta_keywords = models.CharField(max_length=500)
+    meta_title = models.CharField(max_length=500)
+    meta_description = models.CharField(max_length=500)
+
+    def __str__(self):
+        return str(self.title)
+
+    class Meta:
+        verbose_name_plural = ("SEO Tiling")
+
+
+class SeoPainting(models.Model):
+    title = models.CharField(max_length=200)
+    meta_keywords = models.CharField(max_length=500)
+    meta_title = models.CharField(max_length=500)
+    meta_description = models.CharField(max_length=500)
+
+    def __str__(self):
+        return str(self.title)
+
+    class Meta:
+        verbose_name_plural = ("SEO Painting")
+
+
+class SeoCarpentry(models.Model):
+    title = models.CharField(max_length=200)
+    meta_keywords = models.CharField(max_length=500)
+    meta_title = models.CharField(max_length=500)
+    meta_description = models.CharField(max_length=500)
+
+    def __str__(self):
+        return str(self.title)
+
+    class Meta:
+        verbose_name_plural = ("SEO Carpentry")
+
+
+class SeoMasonry(models.Model):
+    title = models.CharField(max_length=200)
+    meta_keywords = models.CharField(max_length=500)
+    meta_title = models.CharField(max_length=500)
+    meta_description = models.CharField(max_length=500)
+
+    def __str__(self):
+        return str(self.title)
+
+    class Meta:
+        verbose_name_plural = ("SEO Masonry")
+
+
+class SeoWallpaperFixing(models.Model):
+    title = models.CharField(max_length=200)
+    meta_keywords = models.CharField(max_length=500)
+    meta_title = models.CharField(max_length=500)
+    meta_description = models.CharField(max_length=500)
+
+    def __str__(self):
+        return str(self.title)
+
+    class Meta:
+        verbose_name_plural = ("SEO Wallpaper Fixing")
+
+
+class SeoGeneralMaintenance(models.Model):
+    title = models.CharField(max_length=200)
+    meta_keywords = models.CharField(max_length=500)
+    meta_title = models.CharField(max_length=500)
+    meta_description = models.CharField(max_length=500)
+
+    def __str__(self):
+        return str(self.title)
+
+    class Meta:
+        verbose_name_plural = ("SEO General Maintenance")
+
+
+class SeoBuildingCleaning(models.Model):
+    title = models.CharField(max_length=200)
+    meta_keywords = models.CharField(max_length=500)
+    meta_title = models.CharField(max_length=500)
+    meta_description = models.CharField(max_length=500)
+
+    def __str__(self):
+        return str(self.title)
+
+    class Meta:
+        verbose_name_plural = ("SEO Building Cleaning")
+
+
+class SeoResidentialCleaning(models.Model):
+    title = models.CharField(max_length=200)
+    meta_keywords = models.CharField(max_length=500)
+    meta_title = models.CharField(max_length=500)
+    meta_description = models.CharField(max_length=500)
+
+    def __str__(self):
+        return str(self.title)
+
+    class Meta:
+        verbose_name_plural = ("SEO Residential Cleaning")
+
+
+class SeoSofaCleaning(models.Model):
+    title = models.CharField(max_length=200)
+    meta_keywords = models.CharField(max_length=500)
+    meta_title = models.CharField(max_length=500)
+    meta_description = models.CharField(max_length=500)
+
+    def __str__(self):
+        return str(self.title)
+
+    class Meta:
+        verbose_name_plural = ("SEO Sofa Cleaning")
+
+
+class SeoConstructionCleaning(models.Model):
+    title = models.CharField(max_length=200)
+    meta_keywords = models.CharField(max_length=500)
+    meta_title = models.CharField(max_length=500)
+    meta_description = models.CharField(max_length=500)
+
+    def __str__(self):
+        return str(self.title)
+
+    class Meta:
+        verbose_name_plural = ("SEO Construction Cleaning")
+
+
+class SeoCarpetCleaning(models.Model):
+    title = models.CharField(max_length=200)
+    meta_keywords = models.CharField(max_length=500)
+    meta_title = models.CharField(max_length=500)
+    meta_description = models.CharField(max_length=500)
+
+    def __str__(self):
+        return str(self.title)
+
+    class Meta:
+        verbose_name_plural = ("SEO Carpet Cleaning")
+
+
+class SeoMattressCleaning(models.Model):
+    title = models.CharField(max_length=200)
+    meta_keywords = models.CharField(max_length=500)
+    meta_title = models.CharField(max_length=500)
+    meta_description = models.CharField(max_length=500)
+
+    def __str__(self):
+        return str(self.title)
+
+    class Meta:
+        verbose_name_plural = ("SEO Mattress Cleaning")
+
+
+class SeoOfficeCleaning(models.Model):
+    title = models.CharField(max_length=200)
+    meta_keywords = models.CharField(max_length=500)
+    meta_title = models.CharField(max_length=500)
+    meta_description = models.CharField(max_length=500)
+
+    def __str__(self):
+        return str(self.title)
+
+    class Meta:
+        verbose_name_plural = ("SEO Office Cleaning")

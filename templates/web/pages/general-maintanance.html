@@ -1,5 +1,14 @@
 {% extends 'web/base-two.html' %}
 {% load static %}
+
+{% block meta %}
+<title>{{seo_general_maintenance.title}}</title>
+<meta name="keywords" content="{{seo_general_maintenance.meta_keywords}}">
+<meta name="title" content="{{seo_general_maintenance.meta_title}}">
+<meta name="description" content="{{seo_general_maintenance.meta_description}}">
+{% endblock %}
+
+
 {% block content %}
 
 <!--page start-->

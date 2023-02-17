@@ -11,6 +11,22 @@ from .models import SeoServices
 from .models import SeoPortfolio
 from .models import SeoBlog
 from .models import SeoContact
+from .models import SeoACServiceAndRepairs
+from .models import SeoElectricals
+from .models import SeoPlumbing
+from .models import SeoTiling
+from .models import SeoPainting
+from .models import SeoCarpentry
+from .models import SeoMasonry
+from .models import SeoWallpaperFixing
+from .models import SeoGeneralMaintenance
+from .models import SeoBuildingCleaning
+from .models import SeoResidentialCleaning
+from .models import SeoSofaCleaning
+from .models import SeoConstructionCleaning
+from .models import SeoCarpetCleaning
+from .models import SeoMattressCleaning
+from .models import SeoOfficeCleaning
 
 
 @admin.register(Portfolio)
@@ -71,4 +87,84 @@ class SeoBlogAdmin(admin.ModelAdmin):
 
 @admin.register(SeoContact)
 class SeoContactAdmin(admin.ModelAdmin):
+    list_display = ( 'title','meta_keywords',)
+
+
+@admin.register(SeoACServiceAndRepairs)
+class SeoACServiceAndRepairsAdmin(admin.ModelAdmin):
+    list_display = ( 'title','meta_keywords',)
+
+
+@admin.register(SeoElectricals)
+class SeoElectricalsAdmin(admin.ModelAdmin):
+    list_display = ( 'title','meta_keywords',)
+
+
+@admin.register(SeoPlumbing)
+class SeoPlumbingAdmin(admin.ModelAdmin):
+    list_display = ( 'title','meta_keywords',)
+
+
+@admin.register(SeoTiling)
+class SeoTilingAdmin(admin.ModelAdmin):
+    list_display = ( 'title','meta_keywords',)
+
+
+@admin.register(SeoPainting)
+class SeoPaintingAdmin(admin.ModelAdmin):
+    list_display = ( 'title','meta_keywords',)
+
+
+@admin.register(SeoCarpentry)
+class SeoCarpentryAdmin(admin.ModelAdmin):
+    list_display = ( 'title','meta_keywords',)
+
+
+@admin.register(SeoMasonry)
+class SeoMasonryAdmin(admin.ModelAdmin):
+    list_display = ( 'title','meta_keywords',)
+
+
+@admin.register(SeoWallpaperFixing)
+class SeoWallpaperFixingAdmin(admin.ModelAdmin):
+    list_display = ( 'title','meta_keywords',)
+
+
+@admin.register(SeoGeneralMaintenance)
+class SeoGeneralMaintenanceAdmin(admin.ModelAdmin):
+    list_display = ( 'title','meta_keywords',)
+
+
+@admin.register(SeoBuildingCleaning)
+class SeoBuildingCleaningAdmin(admin.ModelAdmin):
+    list_display = ( 'title','meta_keywords',)
+
+
+@admin.register(SeoResidentialCleaning)
+class SeoResidentialCleaningAdmin(admin.ModelAdmin):
+    list_display = ( 'title','meta_keywords',)
+
+
+@admin.register(SeoSofaCleaning)
+class SeoSofaCleaningAdmin(admin.ModelAdmin):
+    list_display = ( 'title','meta_keywords',)
+
+
+@admin.register(SeoConstructionCleaning)
+class SeoConstructionCleaningAdmin(admin.ModelAdmin):
+    list_display = ( 'title','meta_keywords',)
+
+
+@admin.register(SeoCarpetCleaning)
+class SeoCarpetCleaningAdmin(admin.ModelAdmin):
+    list_display = ( 'title','meta_keywords',)
+
+
+@admin.register(SeoMattressCleaning)
+class SeoMattressCleaningAdmin(admin.ModelAdmin):
+    list_display = ( 'title','meta_keywords',)
+
+
+@admin.register(SeoOfficeCleaning)
+class SeoOfficeCleaningAdmin(admin.ModelAdmin):
     list_display = ( 'title','meta_keywords',)

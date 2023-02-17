@@ -1,5 +1,14 @@
 {% extends 'web/base-two.html' %}
 {% load static %}
+
+{% block meta %}
+<title>{{seo_wallpepper_fixing.title}}</title>
+<meta name="keywords" content="{{seo_wallpepper_fixing.meta_keywords}}">
+<meta name="title" content="{{seo_wallpepper_fixing.meta_title}}">
+<meta name="description" content="{{seo_wallpepper_fixing.meta_description}}">
+{% endblock %}
+
+
 {% block content %}
 
 <!--page start-->
