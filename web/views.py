@@ -236,7 +236,7 @@ def residential_cleaning(request):
 
 
 def sofa_cleaning(request):
-    seo_sofa_cleaning = SeoSofaCleaning.objcets.all().last()
+    seo_sofa_cleaning = SeoSofaCleaning.objects.all().last()
     context = {
         "is_sofa_cleaning":True,
         "seo_sofa_cleaning":seo_sofa_cleaning,
@@ -245,7 +245,7 @@ def sofa_cleaning(request):
 
 
 def construction_cleaning(request):
-    seo_construction_cleaning = SeoConstructionCleaning.objcets.all().last()
+    seo_construction_cleaning = SeoConstructionCleaning.objects.all().last()
     context = {
         "is_construction_cleaning":True,
         "seo_construction_cleaning":seo_construction_cleaning,
@@ -263,7 +263,7 @@ def carpet_cleaning(request):
 
 
 def mattress_cleaning(request):
-    seo_mattress_cleaning = SeoMattressCleaning.objcets.all().last()
+    seo_mattress_cleaning = SeoMattressCleaning.objects.all().last()
     context = {
         "is_mattress_cleaning":True,
         "seo_mattress_cleaning":seo_mattress_cleaning,
@@ -272,7 +272,7 @@ def mattress_cleaning(request):
 
 
 def office_cleaning(request):
-    seo_office_cleaning = SeoOfficeCleaning.objcets.all().last()
+    seo_office_cleaning = SeoOfficeCleaning.objects.all().last()
     context = {
         "is_office_cleaning":True,
         "seo_office_cleaning":seo_office_cleaning,
